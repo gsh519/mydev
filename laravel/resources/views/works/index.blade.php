@@ -1,8 +1,8 @@
 @extends('app')
 @section('title', 'mydev')
 
-@section('content')
 @include('header')
+@section('content')
 <div class="contents">
   <!-- hero -->
   <section class="hero">
@@ -12,7 +12,7 @@
         <img src="/images/undraw_Designer_life_re_6ywf.png">
       </div>
       <p class="contents__txt">mydevは、誰でも直感的に使えるWebポートフォリオ作成サービスです。<br>制作物や仕事のストーリーを記録して、ポートフォリオを育てていきましょう。</p>
-      <a href="#" class="btn btn--hero">
+      <a href="{{ route('register') }}" class="btn btn--hero">
         はじめる
       </a>
       <p class="contents__txt__small">（無料で使用できます）</p>
@@ -100,7 +100,7 @@
         <img src="/images/default.png">
       </div>
       <h2 class="start__ttl">Let's get started</h2>
-      <a href="#" class="btn btn--hero">はじめる</a>
+      <a href="{{ route('register') }}" class="btn btn--hero">はじめる</a>
     </div>
   </section>
 
