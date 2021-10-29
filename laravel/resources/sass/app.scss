@@ -13,15 +13,19 @@ body {
 }
 
 p {
-  color: #333;
+  color: #444;
 }
 
 h2 {
-  color: #333;
+  color: #444;
+}
+
+h2 {
+  color: #444;
 }
 
 h3 {
-  color: #333;
+  color: #444;
 }
 
 a {
@@ -334,4 +338,42 @@ register
       color: #333;
     }
   }
+}
+
+/*************
+HOME
+**************/
+.home {
+  &__works {
+    &__ttl {
+      font-size: 44px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .tab {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 0 14px;
+        padding: 5px 0;
+        font-weight: 500;
+        min-width: 44px;
+        cursor: pointer;
+        text-align: center;
+        color: #abb4bd;
+        font-size: 20px;
+        &.active {
+          color: #444;
+          border-bottom: 2px solid #333;
+        }
+      }
+    }
+  }
+}
+.area div {
+  display: none;
+}
+
+.area div.show {
+  display: block;
 }

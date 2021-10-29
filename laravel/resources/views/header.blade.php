@@ -1,6 +1,6 @@
 <header class="header">
   <div class="wrapper header__inner">
-    <a href="/" class="header__logo">
+    <a href="{{ route('works.index') }}" class="header__logo">
       mydev
     </a>
     <ul class="header__nav">
@@ -27,7 +27,7 @@
       @endauth
       @auth
       <li class="header__nav__list">
-        <a class="btn" href="#">
+        <a class="btn" href="{{ route('works.create') }}">
           add work
         </a>
       </li>

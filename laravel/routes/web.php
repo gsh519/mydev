@@ -11,5 +11,11 @@
 |
 */
 
+// ユーザー認証関連
 Auth::routes();
-Route::get('/', 'WorkController@index');
+
+// トップページ表示
+Route::get('/', 'WorkController@home');
+
+//CRUD関連
+Route::resource('/works', 'WorkController')->middleware('auth');
