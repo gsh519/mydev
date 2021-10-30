@@ -13,7 +13,7 @@ $(function() {
     $(this).addClass('active');
 
     // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
-    $('.area div').removeClass('show').eq(index).addClass('show');
+    $('.area__content').removeClass('show').eq(index).addClass('show');
 
   });
 });
