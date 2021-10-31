@@ -14,6 +14,8 @@ $(function() {
 
     // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
     $('.area__content').removeClass('show').eq(index).addClass('show');
-
   });
+
+  $('.slick01').slick();
+
 });

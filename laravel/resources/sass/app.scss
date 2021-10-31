@@ -55,6 +55,13 @@ a {
 }
 
 //カードcss
+.card-scroll {
+  overflow-x: scroll;
+  overflow-y: visible;
+  display: flex;
+  margin: 0 auto 20px;
+}
+
 .card-item {
   position: relative;
   background-color: #fff;
@@ -121,6 +128,21 @@ a {
   &--works {
     max-width: 31.5%;
     margin: 0 0 25px 0;
+  }
+}
+
+.tags-card {
+  padding: 12px 16px;
+  background-color: $btn-color;
+  border-radius: 40px;
+  margin: 0 14px;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: #fff;
+    font-size: 18px;
   }
 }
 
@@ -283,13 +305,6 @@ index
     margin-bottom: 32px;
   }
 
-  .card-scroll {
-    overflow-x: scroll;
-    overflow-y: visible;
-    display: flex;
-    margin: 0 auto 20px;
-  }
-
   .btn-wrap {
     text-align: center;
   }
@@ -355,6 +370,8 @@ HOME
 **************/
 .home {
   &__works {
+    padding: 2rem 0;
+    background-color: #f0fff8;
     &__ttl {
       font-size: 44px;
       text-align: center;
@@ -377,6 +394,28 @@ HOME
           border-bottom: 2px solid #333;
         }
       }
+    }
+  }
+
+  &__works_new {
+    background-color: #d9fbeb;
+    padding: 32px 0;
+    &__ttl {
+      font-size: 44px;
+      color: #444;
+    }
+  }
+
+  &__popular_tags {
+    background-color: #f0fff8;
+    padding: 32px 0;
+    &__scroll {
+      margin-bottom: 0;
+    }
+    &__ttl {
+      font-size: 38px;
+      color: #444;
+      margin-bottom: 32px;
     }
   }
 }
