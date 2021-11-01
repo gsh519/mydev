@@ -16,6 +16,15 @@ $(function() {
     $('.area__content').removeClass('show').eq(index).addClass('show');
   });
 
-  $('.slick01').slick();
+  // プロダクト一覧ページカルーセル
+  $('.mypattern').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 800,
+    dots: true,
+    arrows: true,
+    centerMode: true,
+    centerPadding: '20%'
+  });
 
 });

@@ -23,6 +23,37 @@ a {
   outline: 0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  width: 90%;
+  margin: 0 auto 80px;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.mypattern {
+  width: 100%;
+}
+
+.mypattern .slick-slide {
+  margin: 5px;
+}
+
+.slick-slide {
+  height: auto;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+
 .btn {
   background-color: #2dbdb0;
   color: #fff;
@@ -381,9 +412,19 @@ register
 /*************
 HOME
 **************/
+.home {
+  background-color: #f0fff8;
+}
+
+.home__carousel {
+  padding-top: 32px;
+}
+
 .home__works {
+  margin-top: 64px;
   padding: 2rem 0;
   background-color: #f0fff8;
+  border-top: 1px solid #ccc;
 }
 
 .home__works__ttl {

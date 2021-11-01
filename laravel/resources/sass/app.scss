@@ -33,6 +33,33 @@ a {
   outline: 0;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .slider {
+    width: 90%;
+    margin: 0 auto 80px;
+  }
+  .slick-slide img {
+    width: 100%;
+    height: auto;
+  }
+  .mypattern{
+    width: 100%;
+  }
+  .mypattern .slick-slide{
+    margin: 5px;
+  }
+
+.slick-slide {
+  height: auto;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+
 //ボタンcss
 .btn {
   background-color: $btn-color;
@@ -369,9 +396,15 @@ register
 HOME
 **************/
 .home {
+  background-color: #f0fff8;
+  &__carousel {
+    padding-top: 32px;
+  }
   &__works {
+    margin-top: 64px;
     padding: 2rem 0;
     background-color: #f0fff8;
+    border-top: 1px solid #ccc;
     &__ttl {
       font-size: 44px;
       text-align: center;

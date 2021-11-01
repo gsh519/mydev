@@ -6,12 +6,30 @@
 
   <!-- カルーセル箇所 -->
   <div class="home__carousel">
-    <ul class="slick01">
-      <li>こんにちは</li>
-      <li>おはようございます</li>
-      <li>こんばんは</li>
-      <li>どうも</li>
-    </ul>
+    <div class="wrapper">
+      <ul class="slider mypattern">
+        <li>
+          <a href="#">
+            <img src="https://placehold.jp/300x167.png">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://placehold.jp/300x167.png">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://placehold.jp/300x167.png">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://placehold.jp/300x167.png">
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <!-- プロダウト一覧箇所 -->
