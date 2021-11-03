@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Work;
+use App\Http\Requests\WorkRequest;
 use Illuminate\Http\Request;
 
 class WorkController extends Controller
@@ -208,5 +209,13 @@ class WorkController extends Controller
     public function create()
     {
         return view('works.create');
+    }
+
+    public function store(WorkRequest $request, Work $work)
+    {
+        $work->fill($request->all());
+        $work->user_id = $request->user()->id;
+        $work->save();
+        return redirect()->route('works.index');
     }
 }

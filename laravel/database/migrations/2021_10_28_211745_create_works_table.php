@@ -19,7 +19,7 @@ class CreateWorksTable extends Migration
             $table->string('summary');
             $table->text('body');
             $table->text('service_url');
-            $table->boolean('twitter_check');
+            $table->text('twitter_check')->nullable();
             $table->bigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

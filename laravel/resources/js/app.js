@@ -1,3 +1,14 @@
+import Vue from 'vue'
+import WorkTagsInput from './components/WorkTagsInput'
+
+const app = new Vue({
+  el: '#app',
+  components: {
+    WorkTagsInput,
+  }
+})
+
+
 $(function() {
 
   // ①タブをクリックしたら発動
