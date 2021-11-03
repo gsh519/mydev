@@ -8,6 +8,11 @@
     <div class="create-work">
       <form method="POST" action="{{ route('works.store') }}">
         @csrf
+        <div class="work-cover_image">
+          <label for="cover_image">カバー画像を設定</label>
+          <input type="file" name="cover_image" id="cover_image" required value="{{ old('cover_image') }}">
+          <img id="preview" width="200px">
+        </div>
         <div class="work-title">
           <label for="title">タイトル</label>
           <input type="text" name="title" id="title" required value="{{ old('title') }}">

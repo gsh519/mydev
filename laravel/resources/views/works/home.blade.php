@@ -104,6 +104,5 @@
     </div>
   </section>
 
-  @include('footer')
 </div>
 @endsection

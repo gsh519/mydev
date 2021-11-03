@@ -24,11 +24,13 @@ class WorkRequest extends FormRequest
     public function rules()
     {
         return [
+            'images' => 'required | image',
             'title' => 'required | max:255',
             'summary' => 'required | max:255',
             'body' => 'required',
             'service_url' => 'required | url',
             'twitter_check' => 'nullable',
+            'tags' => 'json|regex:/^(?!.*\s).+$/u|regex:/^(?!.*\/).*$/u',
         ];
     }
 
@@ -40,6 +42,16 @@ class WorkRequest extends FormRequest
             'body' => '本文',
             'service_url' => 'サービスURL',
             'twitter_check' => 'ツイッター投稿の確認',
+            'tags' => 'タグ',
         ];
+    }
+
+    public function passedValidation()
+    {
+        $this->tags = collect(json_decode($this->tags))
+            ->slice(0, 5)
+            ->map(function ($requestTag) {
+                return $requestTag->text;
+            });
     }
 }
