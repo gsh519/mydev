@@ -119,7 +119,7 @@ a {
 }
 
 .card-item__below {
-  padding: 0 1.2em 1.1em;
+  padding: 0 1em 1.1em;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -468,6 +468,16 @@ HOME
   color: #444;
 }
 
+.home__works_new__img {
+  width: 300px;
+  height: 168px;
+  overflow: hidden;
+}
+
+.home__works_new__img img {
+  height: 168px;
+}
+
 .home__popular_tags {
   background-color: #f0fff8;
   padding: 32px 0;
@@ -499,4 +509,14 @@ HOME
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.area__content__img {
+  overflow: hidden;
+  width: 265px;
+  height: 155px;
+}
+
+.area__content__img img {
+  height: 155px;
 }

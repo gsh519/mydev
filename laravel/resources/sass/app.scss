@@ -122,7 +122,7 @@ a {
     }
   }
   &__below {
-    padding: 0 1.2em 1.1em;
+    padding: 0 1em 1.1em;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -441,6 +441,14 @@ HOME
       font-size: 44px;
       color: #444;
     }
+    &__img {
+      width: 300px;
+      height: 168px;
+      overflow: hidden;
+      img {
+        height: 168px;
+      }
+    }
   }
 
   &__popular_tags {
@@ -468,6 +476,15 @@ HOME
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+
+    &__img {
+      overflow: hidden;
+      width: 265px;
+      height: 155px;
+      img {
+        height: 155px;
+      }
     }
   }
 }

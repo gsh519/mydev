@@ -6,11 +6,11 @@
   <div class="wrapper">
     @include('error_list')
     <div class="create-work">
-      <form method="POST" action="{{ route('works.store') }}">
+      <form method="POST" action="{{ route('works.store') }}" enctype="multipart/form-data">
         @csrf
-        <div class="work-cover_image">
-          <label for="cover_image">カバー画像を設定</label>
-          <input type="file" name="cover_image" id="cover_image" required value="{{ old('cover_image') }}">
+        <div class="work-cover_img">
+          <label for="cover_img">カバー画像を設定</label>
+          <input type="file" name="cover_img" id="cover_img" value="{{ old('cover_img') }}">
           <img id="preview" width="200px">
         </div>
         <div class="work-title">

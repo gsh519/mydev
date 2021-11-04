@@ -15,6 +15,7 @@ class CreateWorksTable extends Migration
     {
         Schema::create('works', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('cover_img')->nullable();
             $table->string('title');
             $table->string('summary');
             $table->text('body');

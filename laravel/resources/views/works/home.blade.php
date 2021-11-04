@@ -67,8 +67,8 @@
       @foreach($works as $work)
       <li class="card-item">
         <a href="#">
-          <div class="card-item__img">
-            <img src="{{ $work->cover_img }}">
+          <div class="card-item__img home__works_new__img">
+            <img src="{{ '/storage/'.$work->cover_img }}">
           </div>
           <div class="card-item__info">
             <h3 class="card-item__info__ttl">{{ $work->title }}</h3>
@@ -76,11 +76,11 @@
         </a>
         <a class="card-item__below" href="#">
           <div class="card-item__below__img">
-            <img src="{{ $work->icon_img }}">
+            <img src="https://placehold.jp/42x42.png">
           </div>
           <div class="card-item__below__txt">
             <div class="name">{{ $work->user->name }}</div>
-            <div class="sub">{{ $work->user->desc }}</div>
+            <div class="sub">Webデザイナー</div>
           </div>
         </a>
       </li>

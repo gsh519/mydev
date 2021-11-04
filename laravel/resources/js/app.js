@@ -39,7 +39,7 @@ $(function() {
   });
 
   //プレビュー画像の表示
-  $("[name='cover_image']").on('change', function(e) {
+  $("[name='cover_img']").on('change', function(e) {
     let reader = new FileReader();
 
     reader.onload = function(e) {

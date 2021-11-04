@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Work extends Model
 {
     protected $fillable = [
-        'image_file',
         'title',
         'summary',
         'body',
@@ -25,10 +24,5 @@ class Work extends Model
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany('App\Tag', 'work_tag')->withTimestamps();
-    }
-
-    public function images(): BelongsToMany
-    {
-        return $this->belongsToMany('App\Image', 'work_image')->withTimestamps();
     }
 }

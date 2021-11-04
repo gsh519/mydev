@@ -24,7 +24,7 @@ class WorkRequest extends FormRequest
     public function rules()
     {
         return [
-            'images' => 'required | image',
+            'cover_img' => 'nullable',
             'title' => 'required | max:255',
             'summary' => 'required | max:255',
             'body' => 'required',
@@ -37,6 +37,7 @@ class WorkRequest extends FormRequest
     public function attributes()
     {
         return [
+            'cover_img' => '画像',
             'title' => 'タイトル',
             'summary' => 'プロジェクトの概要',
             'body' => '本文',
