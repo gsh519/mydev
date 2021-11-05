@@ -4,29 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Work;
 use App\Tag;
-use App\Image;
 use App\Http\Requests\WorkRequest;
 use Illuminate\Http\Request;
 
 class WorkController extends Controller
 {
+    //アクセストップページ
     public function home()
     {
         $works = Work::all()->sortByDesc('created_at');
         return view('works.home', ['works' => $works]);
     }
 
+    //記事一覧画面
     public function index()
     {
         $works = Work::all()->sortByDesc('created_at');
         return view('works.index', ['works' => $works]);
     }
 
+    //記事投稿画面表示
     public function create()
     {
         return view('works.create');
     }
 
+    //記事保存処理
     public function store(WorkRequest $request, Work $work)
     {
         $work->fill($request->all());
@@ -42,5 +45,11 @@ class WorkController extends Controller
         });
 
         return redirect()->route('works.index');
+    }
+
+    //記事更新画面表示
+    public function edit(Work $works)
+    {
+        return view('works.edit', ['works' => $works]);
     }
 }

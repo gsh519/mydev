@@ -49,4 +49,9 @@ $(function() {
     reader.readAsDataURL(e.target.files[0]);
   })
 
+  //更新・削除表示
+  $('.line').on('click', function () {
+    $('.dropdown-menu').fadeToggle();
+  });
+
 });

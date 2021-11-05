@@ -178,6 +178,25 @@ a {
   font-size: 18px;
 }
 
+.dropdown {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+}
+
+.dropdown ul {
+  display: none;
+}
+
+.dropdown .ellipsis {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.dropdown .line {
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 900px;
   padding: 0 30px;

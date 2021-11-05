@@ -177,6 +177,25 @@ a {
   }
 }
 
+//dropdown-css
+.dropdown {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  ul {
+    display: none;
+  }
+
+  .ellipsis {
+    color: #ccc;
+    font-size: 14px;
+  }
+
+  .line {
+    cursor: pointer;
+  }
+}
+
 //wrapper-css
 .wrapper {
   max-width: 900px;

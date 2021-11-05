@@ -63,7 +63,19 @@
                   <div class="sub">Webデザイナー</div>
                 </div>
               </a>
+              @if(Auth::id() === $work->user_id)
+              <div class="dropdown">
+                <div class="line"><i class="fas fa-ellipsis-v ellipsis"></i></div>
+                <ul class="dropdown-menu">
+                  <li><a href="{{ route('works.edit', ['work' => $work]) }}"><i class="fas fa-pen"></i>記事を更新する
+                    </a></li>
+                  <div class="dropdown__drive"></div>
+                  <li><a href=""><i class="fas fa-trash-alt"></i>記事を削除する</a></li>
+                </ul>
+              </div>
+              @endif
             </li>
+
             @endforeach
           </ul>
         </div>
