@@ -52,4 +52,24 @@ class WorkController extends Controller
     {
         return view('works.edit', ['work' => $work]);
     }
+
+    //記事更新処理
+    public function update(WorkRequest $request, Work $work)
+    {
+        $work->fill($request->all())->save();
+        return redirect()->route('works.index');
+    }
+
+    //記事削除処理
+    public function destroy(Work $work)
+    {
+        $work->delete();
+        return redirect()->route('works.index');
+    }
+
+    //記事詳細画面表示
+    public function show(Work $work)
+    {
+        return view('works.show', ['work' => $work]);
+    }
 }

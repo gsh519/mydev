@@ -46,7 +46,7 @@
           <ul class="area__content__flex">
             @foreach($works as $work)
             <li class="card-item card-item--works">
-              <a href="#">
+              <a href="{{ route('works.show', ['work' => $work]) }}">
                 <div class="card-item__img area__content__img">
                   <img src="{{ '/storage/'.$work->cover_img }}">
                 </div>
@@ -69,8 +69,11 @@
                 <ul class="dropdown-menu">
                   <li><a href="{{ route('works.edit', ['work' => $work]) }}"><i class="fas fa-pen"></i>記事を更新する
                     </a></li>
-                  <div class="dropdown__drive"></div>
-                  <li><a href=""><i class="fas fa-trash-alt"></i>記事を削除する</a></li>
+                  <form action="{{ route('works.destroy', ['work' => $work]) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <li><button type="submit"><i class="fas fa-trash-alt"></i>記事を削除する</button></li>
+                  </form>
                 </ul>
               </div>
               @endif
