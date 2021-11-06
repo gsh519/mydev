@@ -6,7 +6,8 @@
   <div class="wrapper">
     @include('error_list')
     <div class="create-work">
-      <form method="POST" action="{{ route('works.update', ['work' => $work]) }}" enctype="multipart/form-data">
+      <h1>このページは記事更新ページです</h1>
+      <form method="POST" action="{{ route('works.update', ['work' => $work]) }}">
         @method('PATCH')
         @include('works.form')
         <button class="btn" type="submit">

@@ -48,8 +48,8 @@ class WorkController extends Controller
     }
 
     //記事更新画面表示
-    public function edit(Work $works)
+    public function edit(Work $work)
     {
-        return view('works.edit', ['works' => $works]);
+        return view('works.edit', ['work' => $work]);
     }
 }
