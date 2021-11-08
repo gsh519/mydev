@@ -63,6 +63,11 @@
                   <div class="sub">Webデザイナー</div>
                 </div>
               </a>
+              <div>
+                <work-like :initial-is-liked-by='@json($work->isLikedBy(Auth::user()))' :initial-count-likes='@json($work->count_likes)' :authorized='@json(Auth::check())' endpoint="{{ route('works.like', ['work' => $work]) }}">
+
+                </work-like>
+              </div>
               @if(Auth::id() === $work->user_id)
               <div class="dropdown">
                 <div class="line"><i class="fas fa-ellipsis-v ellipsis"></i></div>

@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import WorkTagsInput from './components/WorkTagsInput'
+import WorkLike from './components/WorkLike'
 
 const app = new Vue({
   el: '#app',
   components: {
     WorkTagsInput,
+    WorkLike,
   }
 })
 

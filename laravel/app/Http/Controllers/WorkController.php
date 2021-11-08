@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class WorkController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Work::class, 'work');
+    }
+
     //アクセストップページ
     public function home()
     {
@@ -71,5 +76,28 @@ class WorkController extends Controller
     public function show(Work $work)
     {
         return view('works.show', ['work' => $work]);
+    }
+
+    //いいね追加機能
+    public function like(Request $request, Work $work)
+    {
+        $work->likes()->detach($request->user()->id);
+        $work->likes()->attach($request->user()->id);
+
+        return [
+            'id' => $work->id,
+            'countLikes' => $work->count_likes,
+        ];
+    }
+
+    //いいね削除機能
+    public function unlike(Request $request, Work $work)
+    {
+        $work->likes()->detach($request->user()->id);
+
+        return [
+            'id' => $work->id,
+            'countLikes' => $work->count_likes,
+        ];
     }
 }
