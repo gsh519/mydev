@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Work;
 use App\Tag;
+use Carbon\Carbon;
 use App\Http\Requests\WorkRequest;
 use Illuminate\Http\Request;
 
@@ -24,8 +25,17 @@ class WorkController extends Controller
     //記事一覧画面
     public function index()
     {
-        $works = Work::all()->sortByDesc('created_at');
-        return view('works.index', ['works' => $works]);
+        //人気の投稿
+        $popular_works = Work::withCount('likes')->orderBy('likes_count', 'desc')->get();
+        //新着順
+        $new_works = Work::all()->sortByDesc('created_at');
+        //1週間以内に作成された投稿を取得
+        $sevendays = Carbon::today()->subDay(7);
+        $weekly_works = Work::whereDate('created_at', '>=', $sevendays)->get();
+        //今日作られた投稿
+        $today = Carbon::today();
+        $today_works = Work::whereDate('created_at', $today)->get();
+        return view('works.index', ['new_works' => $new_works, 'popular_works' => $popular_works, 'weekly_works' => $weekly_works, 'today_works' => $today_works]);
     }
 
     //記事投稿画面表示

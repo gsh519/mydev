@@ -39,12 +39,12 @@
       <ul class="tab">
         <li class="active">Popular</li>
         <li>Weekly</li>
-        <li>All</li>
+        <li>Today</li>
       </ul>
       <div class="area">
         <div class="area__content show">
           <ul class="area__content__flex">
-            @foreach($works as $work)
+            @foreach($popular_works as $work)
             <li class="card-item card-item--works">
               <a href="{{ route('works.show', ['work' => $work]) }}">
                 <div class="card-item__img area__content__img">
@@ -88,7 +88,7 @@
         </div>
         <div class="area__content">
           <ul class="area__content__flex">
-            @foreach($works as $work)
+            @foreach($weekly_works as $work)
             <li class="card-item card-item--works">
               <a href="#">
                 <div class="card-item__img area__content__img">
@@ -113,7 +113,7 @@
         </div>
         <div class="area__content">
           <ul class="area__content__flex">
-            @foreach($works as $work)
+            @foreach($today_works as $work)
             <li class="card-item card-item--works">
               <a href="#">
                 <div class="card-item__img area__content__img">
@@ -149,7 +149,7 @@
     </div>
     <div class="home__works_new__scroll">
       <ul class="card-scroll">
-        @foreach($works as $work)
+        @foreach($new_works as $work)
         <li class="card-item">
           <a href="#">
             <div class="card-item__img home__works_new__img">
@@ -185,7 +185,7 @@
         Popular Tags
       </h2>
       <ul class="card-scroll home__popular_tags__scroll">
-        @foreach($works as $work)
+        @foreach($new_works as $work)
         @foreach($work->tags as $tag)
         <li class="tags-card">
           <a href="{{ route('tags.show', ['tag_name' => $tag->tag_name]) }}">{{ $tag->hashtag }}</a>
