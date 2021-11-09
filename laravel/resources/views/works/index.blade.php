@@ -83,7 +83,6 @@
               </div>
               @endif
             </li>
-
             @endforeach
           </ul>
         </div>
@@ -186,48 +185,13 @@
         Popular Tags
       </h2>
       <ul class="card-scroll home__popular_tags__scroll">
+        @foreach($works as $work)
+        @foreach($work->tags as $tag)
         <li class="tags-card">
-          <a href="#">PHP</a>
+          <a href="{{ route('tags.show', ['tag_name' => $tag->tag_name]) }}">{{ $tag->hashtag }}</a>
         </li>
-        <li class="tags-card">
-          <a href="#">HTML</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">CSS</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">photoshop</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">illustrator</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">pytho</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">ruby</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">javascript</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">javascript</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">javascript</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">javascript</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">javascript</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">javascript</a>
-        </li>
-        <li class="tags-card">
-          <a href="#">javascript</a>
-        </li>
+        @endforeach
+        @endforeach
       </ul>
     </div>
 

@@ -31,7 +31,11 @@ class WorkController extends Controller
     //記事投稿画面表示
     public function create()
     {
-        return view('works.create');
+        $allTagNames = Tag::all()->map(function ($tag) {
+            return ['text' => $tag->tag_name];
+        });
+
+        return view('works.create', ['allTagNames' => $allTagNames]);
     }
 
     //記事保存処理
@@ -55,13 +59,30 @@ class WorkController extends Controller
     //記事更新画面表示
     public function edit(Work $work)
     {
-        return view('works.edit', ['work' => $work]);
+        $tagNames = $work->tags->map(function ($tag) {
+            return ['text' => $tag->tag_name];
+        });
+
+        $allTagNames = Tag::all()->map(function ($tag) {
+            return ['text' => $tag->tag_name];
+        });
+
+        return view('works.edit', [
+            'work' => $work,
+            'tagNames' => $tagNames,
+            'allTagNames' => $allTagNames,
+        ]);
     }
 
     //記事更新処理
     public function update(WorkRequest $request, Work $work)
     {
         $work->fill($request->all())->save();
+        $work->tags()->detach();
+        $request->tags->each(function ($tagName) use ($work) {
+            $tag = Tag::firstOrCreate(['tag_name' => $tagName]);
+            $work->tags()->attach($tag);
+        });
         return redirect()->route('works.index');
     }
 
@@ -89,6 +110,7 @@ class WorkController extends Controller
             'countLikes' => $work->count_likes,
         ];
     }
+
 
     //いいね削除機能
     public function unlike(Request $request, Work $work)

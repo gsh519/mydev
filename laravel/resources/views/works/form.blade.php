@@ -16,7 +16,8 @@
   <textarea placeholder="本文を入力してください" type="text" name="body" id="body" required>{{ $work->body ?? old('body') }}</textarea>
 </div>
 <div class="work-tag">
-  <work-tags-input></work-tags-input>
+  <work-tags-input :initial-tags='@json($tagNames ?? [])' :autocomplete-items='@json($allTagNames ?? [])'>
+  </work-tags-input>
 </div>
 <div class="work-service_url">
   <textarea placeholder="サービスのURLを入力してください" type="text" name="service_url" id="service_url" required>{{ $work->service_url ?? old('service_url') }}</textarea>
