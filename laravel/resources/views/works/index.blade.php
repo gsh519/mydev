@@ -54,7 +54,7 @@
                   <h3 class="card-item__info__ttl">{{ $work->title }}</h3>
                 </div>
               </a>
-              <a class="card-item__below" href="#">
+              <a class="card-item__below" href="{{ route('users.show', ['name' => $work->user->name]) }}">
                 <div class="card-item__below__img">
                   <img src="https://placehold.jp/42x42.png">
                 </div>

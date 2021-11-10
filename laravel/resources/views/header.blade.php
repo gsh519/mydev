@@ -20,7 +20,7 @@
       @endguest
       @auth
       <li class="header__nav__list">
-        <a class="icon" href="#">
+        <a class="icon" href="{{ route('users.show', ['name' => Auth::user()->name]) }}">
           <i class="fas fa-user-circle"></i>
         </a>
       </li>
