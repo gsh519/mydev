@@ -5,7 +5,9 @@
 <div class="contents signup">
   <div class="wrapper signup__inner">
     <div class="signup_area">
-      <h1 class="signup_area__ttl">Welcome!</h1>
+      <h1 class="signup_area__ttl">ログイン</h1>
+
+      <a class="btn" href="{{ route('login.{provider}', ['provider' => 'google']) }}"><i class="fab fa-google mr-1"></i>Googleでログイン</a>
 
       <!-- エラー表示 -->
       @include('error_list')
