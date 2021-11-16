@@ -11,7 +11,7 @@
       <div class="hero__img">
         <img src="/images/undraw_Designer_life_re_6ywf.png">
       </div>
-      <p class="contents__txt">mydevは、誰でも直感的に使えるWebポートフォリオ作成サービスです。<br>制作物や仕事のストーリーを記録して、ポートフォリオを育てていきましょう。</p>
+      <p class="contents__txt">mydevは、自身で開発したサービスや制作物をより世間にに知ってもらいやすくするサービスです！<br>自身のサービス、制作物を公開して、みんなに知ってもらい意見をもらいましょう！</p>
       <a href="{{ route('register') }}" class="btn btn--hero">
         はじめる
       </a>
@@ -23,7 +23,7 @@
   <section class="detail">
     <div class="wrapper detail__inner">
       <h2 class="detail__ttl">For everyone.</h2>
-      <p class="contents__txt">ポートフォリオはデザイナーやアーティストだけのものではありません。mydevは全ての人のためのポートフォリオ作成サービスです。エンジニア、起業家、マーケター、写真家、イラストレーター、学生…、誰にだって残しておきたい作品やストーリーがあるはずです。</p>
+      <p class="contents__txt">サービス、制作物とはデザイナーやアーティストだけのものではありません。mydevは全ての人のための共有の場です。エンジニア、起業家、マーケター、写真家、イラストレーター、学生…、誰にでも使用できるサービスです</p>
       <div class="detail__img">
         <img src="/images/illustration1.png">
       </div>
@@ -39,22 +39,22 @@
           <div class="features__flex__img">
             <img src="/images/features-26-min.png" alt="">
           </div>
-          <h3 class="features__flex__ttl">鍵付き公開</h3>
-          <p class="features__flex__txt">Workページには自由に鍵をかけることもできます。鍵付きのWorkには、合言葉を知っている人のみがアクセスできます。</p>
+          <h3 class="features__flex__ttl">twitterへの投稿</h3>
+          <p class="features__flex__txt">投稿の際にtwitterへの投稿を許可すると、自身のサービスや制作物をmydevのtwitterで紹介いたします！</p>
         </li>
         <li class="features__flex__list">
           <div class="features__flex__img">
             <img src="/images/features-27-min.png" alt="">
           </div>
           <h3 class="features__flex__ttl">トピックを紐づけ</h3>
-          <p class="features__flex__txt">Workにトピックを指定すれば、どんなツールや技術を使ったのか一目で分かります。同じトピックを持つWorkを探すこともできます。</p>
+          <p class="features__flex__txt">自身のサービスや制作物にタグを指定すれば、どんなツールや技術を使ったのか一目で分かります。同じトピックを持つ作品を探すこともできます。</p>
         </li>
         <li class="features__flex__list">
           <div class="features__flex__img">
             <img src="/images/features-28-min.png" alt="">
           </div>
-          <h3 class="features__flex__ttl">何よりの履歴書に</h3>
-          <p class="features__flex__txt">堅苦しい紙の履歴書なんかより、経験や制作物をストックしたRESUMEの方が遥かにあなたの魅力を伝えてくれるはずです。</p>
+          <h3 class="features__flex__ttl">履歴書にだって</h3>
+          <p class="features__flex__txt">堅苦しい紙の履歴書なんかより、経験や制作物をストックしたmydevの方が遥かにあなたの魅力を伝えてくれるはずです。</p>
         </li>
       </ul>
     </div>

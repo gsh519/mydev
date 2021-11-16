@@ -8,26 +8,13 @@
   <div class="home__carousel">
     <div class="wrapper">
       <ul class="slider mypattern">
+        @foreach($carousel_works as $work)
         <li>
-          <a href="#">
-            <img src="https://placehold.jp/300x167.png">
+          <a href="{{ route('works.show', ['work' => $work]) }}">
+            <img src="{{ '/storage/'.$work->cover_img }}">
           </a>
         </li>
-        <li>
-          <a href="#">
-            <img src="https://placehold.jp/300x167.png">
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="https://placehold.jp/300x167.png">
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="https://placehold.jp/300x167.png">
-          </a>
-        </li>
+        @endforeach
       </ul>
     </div>
   </div>
@@ -56,7 +43,7 @@
               </a>
               <a class="card-item__below" href="{{ route('users.show', ['name' => $work->user->name]) }}">
                 <div class="card-item__below__img">
-                  <img src="https://placehold.jp/42x42.png">
+                  <img src="{{ '/storage/'.$work->user->icon_img }}">
                 </div>
                 <div class="card-item__below__txt">
                   <div class="name">{{ $work->user->name }}</div>
@@ -180,10 +167,12 @@
   </div>
   <!-- popular tags -->
   <div class="home__popular_tags">
-    <div class="wrapper">
-      <h2 class="home__popular_tags__ttl">
-        Popular Tags
-      </h2>
+    <div>
+      <div class="wrapper">
+        <h2 class="home__popular_tags__ttl">
+          Popular Tags
+        </h2>
+      </div>
       <ul class="card-scroll home__popular_tags__scroll">
         @foreach($new_works as $work)
         @foreach($work->tags as $tag)

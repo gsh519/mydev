@@ -6,6 +6,8 @@
   <div class="wrapper">
     <div class="user-card">
       <h1>これは{{ $user->name }}のユーザーページです！</h1>
+      <p>{{ $user->comment }}</p>
+      <p>{{ $user->email }}</p>
       <a href="{{ route('users.edit', ['user' => $user, 'name' => Auth::user()->name]) }}" class="btn">ユーザー編集画面</a>
       @if (Auth::id() !== $user->id)
       <follow-button :initial-is-followed-by='@json($user->isFollowedBy(Auth::user()))' :authorized='@json(Auth::check())' endpoint="{{ route('users.follow', ['name' => $user->name]) }}">

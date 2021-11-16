@@ -27,6 +27,10 @@ class WorkController extends Controller
     {
         //人気の投稿
         $popular_works = Work::withCount('likes')->orderBy('likes_count', 'desc')->get();
+
+        //人気の投稿4件取得
+        $carousel_works = Work::withCount('likes')->orderBy('likes_count', 'desc')->take(4)->get();
+
         //新着順
         $new_works = Work::all()->sortByDesc('created_at');
         //1週間以内に作成された投稿を取得
@@ -35,7 +39,7 @@ class WorkController extends Controller
         //今日作られた投稿
         $today = Carbon::today();
         $today_works = Work::whereDate('created_at', $today)->get();
-        return view('works.index', ['new_works' => $new_works, 'popular_works' => $popular_works, 'weekly_works' => $weekly_works, 'today_works' => $today_works]);
+        return view('works.index', ['new_works' => $new_works, 'popular_works' => $popular_works, 'weekly_works' => $weekly_works, 'today_works' => $today_works, 'carousel_works' => $carousel_works]);
     }
 
     //記事投稿画面表示

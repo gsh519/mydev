@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -47,5 +48,18 @@ class UserController extends Controller
         $id = Auth::id();
         $user = User::find($id);
         return view('users.edit', ['user' => $user]);
+    }
+
+    //ユーザー編集処理
+    public function update(string $name, Request $request)
+    {
+        $id = Auth::id();
+        $user = User::find($id);
+        $edit_data = $user->fill($request->all());
+        $fileName = $request->icon_img->getClientOriginalName();
+        $icon_img = $request->file('icon_img')->storeAs('', $fileName, 'public');
+        $user->icon_img = $icon_img;
+        $edit_data->save();
+        return redirect()->route('users.show', ['name' => $name]);
     }
 }

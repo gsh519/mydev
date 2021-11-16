@@ -36,6 +36,9 @@ Route::prefix('users')->name('users.')->group(function () {
   //ユーザー編集画面
   Route::get('/{name}/edit', 'UserController@edit')->name('edit');
 
+  //ユーザー編集処理
+  Route::patch('/{name}', 'UserController@update')->name('update');
+
   //フォロー機能
   Route::middleware('auth')->group(function () {
     Route::put('/{name}/follow', 'UserController@follow')->name('follow');
