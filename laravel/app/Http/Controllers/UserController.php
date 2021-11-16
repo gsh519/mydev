@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -38,5 +39,13 @@ class UserController extends Controller
         $request->user()->followings()->detach($user);
 
         return ['name' => $name];
+    }
+
+    //ユーザー編集画面表示
+    public function edit()
+    {
+        $id = Auth::id();
+        $user = User::find($id);
+        return view('users.edit', ['user' => $user]);
     }
 }
