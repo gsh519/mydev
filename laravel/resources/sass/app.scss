@@ -69,6 +69,11 @@ a {
 
 .likes {
   color: red;
+  margin-bottom: 2.5px;
+}
+
+.likes-count {
+  font-size: 14px;
 }
 
 //ボタンcss
@@ -117,8 +122,14 @@ a {
       width: 100%;
     }
   }
+  &__active {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px 12px 0;
+  }
   &__info {
-    padding: 1em 1.2em 0.6em;
+    padding: 0.2em 12px;
     &__ttl {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -129,7 +140,7 @@ a {
     }
   }
   &__below {
-    padding: 0 1em 1.1em;
+    padding: 0 12px 1.1em;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -189,9 +200,7 @@ a {
 
 //dropdown-css
 .dropdown {
-  position: absolute;
-  right: 10px;
-  top: 60%;
+  margin-left: 10px;
   ul {
     display: none;
   }
@@ -437,7 +446,6 @@ HOME
     margin-top: 64px;
     padding: 2rem 0;
     background-color: #f0fff8;
-    border-top: 1px solid #ccc;
     &__ttl {
       font-size: 40px;
       text-align: center;
@@ -464,7 +472,7 @@ HOME
   }
 
   &__works_new {
-    background-color: #d9fbeb;
+    background-color: #cbecdd;
     padding: 32px 0;
     &__ttl {
       font-size: 40px;

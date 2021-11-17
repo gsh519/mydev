@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="likes-count">
     <button
       type="button"
     >
