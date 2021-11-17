@@ -21,13 +21,16 @@
       @auth
       <li class="header__nav__list">
         <a class="icon" href="{{ route('users.show', ['name' => Auth::user()->name]) }}">
-          <i class="fas fa-user-circle"></i>
+          <div class="card-item__below__img">
+            <img src="{{ '/storage/'.Auth::user()->icon_img }}">
+          </div>
         </a>
       </li>
       @endauth
       @auth
       <li class="header__nav__list">
         <a class="btn" href="{{ route('works.create') }}">
+          <i class="fas fa-plus"></i>
           add work
         </a>
       </li>

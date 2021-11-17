@@ -71,6 +71,7 @@
     <div class="wrapper">
       <a class="btn btn--black" href="#">
         もっと見る
+        <i class="fas fa-angle-right fa-strong"></i>
       </a>
     </div>
   </div>
