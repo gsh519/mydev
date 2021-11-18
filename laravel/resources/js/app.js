@@ -19,7 +19,7 @@ $(function() {
   $('.tab li').click(function() {
 
     // ②クリックされたタブの順番を変数に格納
-    var index = $('.tab li').index(this);
+    let index = $('.tab li').index(this);
 
     // ③クリック済みタブのデザインを設定したcssのクラスを一旦削除
     $('.tab li').removeClass('active');
@@ -33,7 +33,7 @@ $(function() {
 
   // プロダクト一覧ページカルーセル
   $('.mypattern').slick({
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     speed: 800,
     dots: true,
@@ -53,9 +53,20 @@ $(function() {
     reader.readAsDataURL(e.target.files[0]);
   })
 
+  // アイコンモーダル
+  $('#icon-profile').on('click', function() {
+    $('#header-modal').fadeToggle();
+    return false;
+  });
+
   //更新・削除表示
-  $('.line').on('click', function () {
-    $('.dropdown-menu').fadeToggle();
+  $('.line').each(function () {
+    $(this).on('click', function() {
+      let target = $(this).data('target');
+      let modal = document.getElementById(target);
+      $(modal).fadeToggle();
+      return false;
+    });
   });
 
 });

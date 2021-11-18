@@ -19,13 +19,33 @@
       </li>
       @endguest
       @auth
-      <li class="header__nav__list">
-        <a class="icon" href="{{ route('users.show', ['name' => Auth::user()->name]) }}">
-          <div class="card-item__below__img">
-            <img src="{{ '/storage/'.Auth::user()->icon_img }}">
-          </div>
-        </a>
+      <li id="icon-profile" class="header__nav__list">
+        <div class="card-item__below__img">
+          @if (Auth::user()->icon_img)
+          <img src="{{ '/storage/'.Auth::user()->icon_img }}" alt="アイコン画像">
+          @else
+          <img src="/images/default.png" alt="デフォルト画像">
+          @endif
+        </div>
       </li>
+      <!-- モーダルウィンドウ -->
+      <div id="header-modal" class="modal">
+        <ul>
+          <li>
+            <a class="icon" href="{{ route('users.show', ['name' => Auth::user()->name]) }}">
+              プロフィール設定
+            </a>
+          </li>
+          <li>
+            <button form="logout-button" type="submit">
+              ログアウト
+            </button>
+            <form id="logout-button" action="{{ route('logout') }}" method="POST">
+              @csrf
+            </form>
+          </li>
+        </ul>
+      </div>
       @endauth
       @auth
       <li class="header__nav__list">
@@ -34,16 +54,6 @@
           add work
         </a>
       </li>
-      @endauth
-      @auth
-      <li class="header__nav__list">
-        <button form="logout-button" class="btn" type="submit">
-          ログアウト
-        </button>
-      </li>
-      <form id="logout-button" action="{{ route('logout') }}" method="POST">
-        @csrf
-      </form>
       @endauth
     </ul>
   </div>

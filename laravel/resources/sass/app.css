@@ -203,10 +203,38 @@ a {
 
 .dropdown {
   margin-left: 10px;
+  position: relative;
 }
 
 .dropdown ul {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   display: none;
+  position: absolute;
+  width: 150px;
+  right: -20px;
+  top: 20px;
+}
+
+.dropdown ul li {
+  font-size: 15px;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown ul li:first-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown ul li .fas {
+  margin-right: 3px;
+}
+
+.dropdown ul li button {
+  color: red;
 }
 
 .dropdown .ellipsis {
@@ -263,6 +291,45 @@ header
 
 .header__nav__list .icon {
   font-size: 32px;
+}
+
+#icon-profile {
+  cursor: pointer;
+}
+
+.modal {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  top: 75px;
+  right: 397px;
+}
+
+.modal ul {
+  position: relative;
+}
+
+.modal ul:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal ul li {
+  padding: 10px;
+}
+
+.modal ul li:first-child {
+  border-bottom: 1px solid #ccc;
 }
 
 /*************
@@ -464,6 +531,37 @@ HOME
   padding-top: 32px;
 }
 
+.home__carousel__list {
+  position: relative;
+}
+
+.home__carousel__wrap {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  padding: 50px 30px;
+  bottom: 0;
+  left: 0;
+}
+
+.home__carousel__wrap__flex {
+  display: flex;
+  align-items: center;
+}
+
+.home__carousel__wrap__flex .name {
+  margin-left: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.home__carousel__wrap__ttl {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 145px;
+}
+
 .home__works {
   margin-top: 64px;
   padding: 2rem 0;
@@ -559,4 +657,74 @@ HOME
 
 .area__content__img img {
   height: 155px;
+}
+
+.user-card {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.user-card__icon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.user-card__icon img {
+  width: 150px;
+  height: auto;
+}
+
+.user-card__flex {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-card__flex__name {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.user-card__flex .edit-pen {
+  color: #bac0c3;
+}
+
+.user-card__comment {
+  margin-bottom: 20px;
+  font-size: 0.97em;
+}
+
+.user-card__btn {
+  margin-bottom: 20px;
+}
+
+.user-card__follow span {
+  margin: 0 10px;
+}
+
+.user-card__follow span strong {
+  font-size: 18px;
+}
+
+.user-works {
+  margin-top: 50px;
+  border-top: 1px solid #ccc;
+  padding-top: 40px;
+}
+
+.user-works__ttl {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.user-works__flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

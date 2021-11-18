@@ -9,11 +9,7 @@
     <div class="wrapper">
       <ul class="slider mypattern">
         @foreach($carousel_works as $work)
-        <li>
-          <a href="{{ route('works.show', ['work' => $work]) }}">
-            <img src="{{ '/storage/'.$work->cover_img }}">
-          </a>
-        </li>
+        @include('works.carousel')
         @endforeach
       </ul>
     </div>

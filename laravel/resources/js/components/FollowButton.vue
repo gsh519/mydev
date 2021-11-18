@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="user-card__btn">
     <button
+    class="btn"
       :class="buttonColor"
       @click="clickFollow"
     >
