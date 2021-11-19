@@ -505,6 +505,10 @@ footer
 /*************
 register
 **************/
+.signup {
+  background-color: #EDF2F6;
+}
+
 .signup__inner {
   min-height: calc(100vh - 64px);
   display: flex;
@@ -513,11 +517,16 @@ register
 }
 
 .signup .signup_area {
+  width: 350px;
   text-align: center;
   background-color: #fff;
   box-shadow: 1px 1px 5px 1px #ccc;
   border-radius: 10px;
   padding: 20px;
+}
+
+.signup .signup_area i {
+  margin-right: 5px;
 }
 
 .signup .signup_area__ttl {
@@ -527,11 +536,31 @@ register
 }
 
 .signup .signup_area__form {
+  text-align: left;
   margin: 20px 0 0;
+}
+
+.signup .signup_area__form input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.signup .signup_area__form .forget_password {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .signup .signup_area__btn {
   width: 100%;
+  text-align: center;
+}
+
+.signup .signup_area__btn--last {
+  margin-top: 20px;
 }
 
 /*************
@@ -673,12 +702,22 @@ HOME
   height: 155px;
 }
 
-.user-card {
+.user-area {
+  background-color: #EDF2F6;
+}
+
+.user-area .user-head {
+  box-shadow: 1px 1px 10px 5px #ccc;
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+
+.user-area .user-head .user-card {
   padding-top: 30px;
   text-align: center;
 }
 
-.user-card__icon {
+.user-area .user-head .user-card__icon {
   width: 150px;
   height: 150px;
   overflow: hidden;
@@ -687,57 +726,56 @@ HOME
   margin: 20px auto;
 }
 
-.user-card__icon img {
+.user-area .user-head .user-card__icon img {
   width: 150px;
   height: auto;
 }
 
-.user-card__flex {
+.user-area .user-head .user-card__flex {
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.user-card__flex__name {
+.user-area .user-head .user-card__flex__name {
   font-size: 28px;
   margin-right: 5px;
 }
 
-.user-card__flex .edit-pen {
+.user-area .user-head .user-card__flex .edit-pen {
   color: #bac0c3;
 }
 
-.user-card__comment {
+.user-area .user-head .user-card__comment {
   margin-bottom: 20px;
   font-size: 0.97em;
 }
 
-.user-card__btn {
+.user-area .user-head .user-card__btn {
   margin-bottom: 20px;
 }
 
-.user-card__follow span {
+.user-area .user-head .user-card__follow span {
   margin: 0 10px;
 }
 
-.user-card__follow span strong {
+.user-area .user-head .user-card__follow span strong {
   font-size: 18px;
 }
 
-.user-works {
-  margin-top: 50px;
+.user-area .user-works {
   border-top: 1px solid #ccc;
   padding-top: 40px;
 }
 
-.user-works__ttl {
+.user-area .user-works__ttl {
   font-size: 36px;
   color: #333;
   margin-bottom: 20px;
 }
 
-.user-works__flex {
+.user-area .user-works__flex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
