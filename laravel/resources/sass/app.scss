@@ -481,15 +481,27 @@ register
 **************/
 .signup {
   &__inner {
-  min-height: calc(100vh - 64px);
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .signup_area {
-    display: grid;
-    place-content: center;
     text-align: center;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 1px #ccc;
+    border-radius: 10px;
+    padding: 20px;
     &__ttl {
-      font-size: 48px;
+      font-size: 38px;
       color: #333;
+      margin-bottom: 20px;
+    }
+    &__form {
+      margin: 20px 0 0;
+    }
+    &__btn {
+      width: 100%;
     }
   }
 }
@@ -672,5 +684,57 @@ HOME
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+}
+
+
+//worksの詳細画面
+.head-cover {
+  background-color: #EDF2F6;
+  padding: 4.5em 2em;
+  &__img {
+    max-width: calc(800px - 3em);
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.head-body {
+  padding: 30px 0;
+  &__ttl {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    &__icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+      img {
+        width: 60px;
+        height: auto;
+      }
+    }
+    &__desc {
+      .name {
+        font-size: 18px;
+        margin-bottom: 3px;
+      }
+      .sub {
+        font-size: 12px;
+        color: rgba(58,60,72,0.45);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 30px;
   }
 }

@@ -507,17 +507,31 @@ register
 **************/
 .signup__inner {
   min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup .signup_area {
-  display: grid;
-  place-content: center;
   text-align: center;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px 1px #ccc;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .signup .signup_area__ttl {
-  font-size: 48px;
+  font-size: 38px;
   color: #333;
+  margin-bottom: 20px;
+}
+
+.signup .signup_area__form {
+  margin: 20px 0 0;
+}
+
+.signup .signup_area__btn {
+  width: 100%;
 }
 
 /*************
@@ -727,4 +741,60 @@ HOME
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.head-cover {
+  background-color: #EDF2F6;
+  padding: 4.5em 2em;
+}
+
+.head-cover__img {
+  max-width: calc(800px - 3em);
+  margin: 0 auto;
+}
+
+.head-cover__img img {
+  width: 100%;
+}
+
+.head-body {
+  padding: 30px 0;
+}
+
+.head-body__ttl {
+  font-size: 34px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.head-body__user {
+  display: flex;
+  align-items: center;
+}
+
+.head-body__user__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.head-body__user__icon img {
+  width: 60px;
+  height: auto;
+}
+
+.head-body__user__desc .name {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.head-body__user__desc .sub {
+  font-size: 12px;
+  color: rgba(58, 60, 72, 0.45);
+}
+
+.head-body__content {
+  margin-top: 30px;
 }

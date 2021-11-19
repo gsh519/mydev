@@ -5,9 +5,9 @@
 <div class="contents signup">
   <div class="wrapper signup__inner">
     <div class="signup_area">
-      <h1 class="signup_area__ttl">ユーザー登録</h1>
+      <h1 class="signup_area__ttl">SignUp!</h1>
 
-      <a class="btn" href="{{ route('login.{provider}', ['provider' => 'google']) }}"><i class="fab fa-google mr-1"></i>Googleで登録</a>
+      <a class="btn signup_area__btn" href="{{ route('login.{provider}', ['provider' => 'google']) }}"><i class="fab fa-google mr-1"></i>Googleで登録</a>
 
       <!-- エラー表示 -->
       @include('error_list')
@@ -31,7 +31,7 @@
             <label for="password_confirmation">パスワード確認</label>
             <input type="password" id="password_confirmation" name="password_confirmation" required>
           </div>
-          <button class="btn" type="submit">ユーザー登録</button>
+          <button class="btn signup_area__btn" type="submit">ユーザー登録</button>
         </form>
       </div>
     </div>

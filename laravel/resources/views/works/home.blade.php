@@ -85,6 +85,6 @@
       <a href="{{ route('register') }}" class="btn btn--hero">はじめる</a>
     </div>
   </section>
-
+  @include('footer')
 </div>
 @endsection
