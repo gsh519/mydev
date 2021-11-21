@@ -3,17 +3,21 @@
 @include('header')
 @section('content')
 <div class="contents">
-  <div class="wrapper">
-    <h1>{{ $user->name }}の編集画面ですよー</h1>
-    @include('error_list')
-    <div class="create-work">
-      <form enctype="multipart/form-data" method="POST" action="{{ route('users.update', ['user' => $user, 'name' => Auth::user()->name]) }}">
-        @method('PATCH')
-        @include('users.form')
-        <button class="btn" type="submit">
-          保存する
-        </button>
-      </form>
+  <div class="profile">
+    <div class="profile__card">
+      <h1 class="profile__card__ttl">Profile</h1>
+      @include('error_list')
+      <div class="create-work">
+        <form enctype="multipart/form-data" method="POST" action="{{ route('users.update', ['user' => $user, 'name' => Auth::user()->name]) }}">
+          @method('PATCH')
+          @include('users.form')
+          <div class="create-work__btn">
+            <button class="btn" type="submit">
+              この内容で保存する
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
