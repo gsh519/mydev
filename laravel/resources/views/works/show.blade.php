@@ -25,6 +25,16 @@
       </div>
     </div>
   </div>
+  <div class="head-other_works">
+    <div class="wrapper">
+      <h2>Other Works</h2>
+      <ul class="area__content__flex">
+        @foreach($other_works as $work)
+        @include('works.card')
+        @endforeach
+      </ul>
+    </div>
+  </div>
   @include('footer')
 </div>
 @endsection

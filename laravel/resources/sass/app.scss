@@ -472,7 +472,7 @@ footer
 **************/
 //footer-css
 .footer {
-  background-color: $btn-color;
+  background-color: #232B33;
   &__inner {
     padding: 8px 0;
   }
@@ -737,7 +737,7 @@ HOME
   background-color: #EDF2F6;
   padding: 4.5em 2em;
   &__img {
-    max-width: calc(800px - 3em);
+    max-width: calc(700px - 3em);
     margin: 0 auto;
     img {
       width: 100%;
@@ -784,6 +784,16 @@ HOME
     margin-top: 30px;
     font-size: 18px;
     min-height: 300px;
+  }
+}
+
+.head-other_works {
+  background-color: #EDF2F6;
+  padding: 60px 0;
+  h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
   }
 }
 
@@ -919,6 +929,10 @@ Profile
   &__btn {
     text-align: center;
   }
+}
+
+.vue-tags-input .ti-tag {
+  border-radius: 25px;
 }
 
 // profile アイコン画像レイアウト

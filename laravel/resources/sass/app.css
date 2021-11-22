@@ -497,7 +497,7 @@ index
 footer
 **************/
 .footer {
-  background-color: #2dbdb0;
+  background-color: #232B33;
 }
 
 .footer__inner {
@@ -804,7 +804,7 @@ HOME
 }
 
 .head-cover__img {
-  max-width: calc(800px - 3em);
+  max-width: calc(700px - 3em);
   margin: 0 auto;
 }
 
@@ -856,6 +856,17 @@ HOME
   margin-top: 30px;
   font-size: 18px;
   min-height: 300px;
+}
+
+.head-other_works {
+  background-color: #EDF2F6;
+  padding: 60px 0;
+}
+
+.head-other_works h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
 }
 
 /*************
@@ -1003,6 +1014,10 @@ Profile
 
 .create-work__btn {
   text-align: center;
+}
+
+.vue-tags-input .ti-tag {
+  border-radius: 25px;
 }
 
 .filelabel {

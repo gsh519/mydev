@@ -110,7 +110,9 @@ class WorkController extends Controller
     //記事詳細画面表示
     public function show(Work $work)
     {
-        return view('works.show', ['work' => $work]);
+        $work_user_id = $work->user->id;
+        $other_works = $work->where('user_id', $work_user_id)->get();
+        return view('works.show', ['work' => $work, 'other_works' => $other_works]);
     }
 
     //いいね追加機能
