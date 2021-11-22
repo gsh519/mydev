@@ -46,6 +46,12 @@
             @endforeach
           </ul>
         </div>
+        <div class="area__btn">
+          <button class="btn btn--black">
+            もっと見る
+            <i class="fas fa-angle-right fa-strong"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>

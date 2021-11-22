@@ -34,9 +34,7 @@
     </div>
     <div class="card-item__below__txt">
       <div class="name">{{ $work->user->name }}</div>
-      <div class="sub">Webデザイナー</div>
+      <div class="sub">{{ $work->user->comment }}</div>
     </div>
   </a>
-
-
 </li>

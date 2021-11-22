@@ -109,6 +109,13 @@ a {
   max-width: 300px;
   margin: 25px 13px;
   padding-bottom: 60px;
+  opacity: 1;
+}
+
+.card-item.is-hidden {
+  opacity: 0;
+  height: 0;
+  margin: 0;
 }
 
 .card-item__img img {
@@ -155,8 +162,8 @@ a {
 }
 
 .card-item__below__img img {
-  width: 42px;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .card-item__below__txt {
@@ -703,12 +710,20 @@ HOME
   height: 155px;
 }
 
+.area__btn {
+  text-align: right;
+}
+
+.area__btn.is-btn-hidden {
+  display: none;
+}
+
 .user-area {
   background-color: #EDF2F6;
 }
 
 .user-area .user-head {
-  box-shadow: 1px 1px 10px 5px #ccc;
+  box-shadow: 1px 1px 5px 1px #ccc;
   background-color: #fff;
   padding-bottom: 50px;
 }
@@ -851,6 +866,7 @@ Profile
 
 .profile__card {
   background-color: #fff;
+  border-top: 3px solid #2dbdb0;
   padding: 20px;
   box-shadow: 1px 1px 5px 3px #ccc;
   text-align: left;
@@ -921,4 +937,23 @@ Profile
 
 #icon_img {
   display: none;
+}
+
+.tag_area {
+  background-color: #EDF2F6;
+  padding-top: 30px;
+}
+
+.tag-name {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.tag-name span {
+  font-size: 18px;
+}
+
+.tag-count {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
