@@ -3,17 +3,17 @@
 @include('header')
 @section('content')
 <div class="contents">
-  <div class="wrapper">
-    @include('error_list')
-    <div class="create-work">
-      <form method="POST" action="{{ route('works.store') }}" enctype="multipart/form-data">
-        @csrf
-        @include('works.form')
+  @include('error_list')
+  <div class="create-work">
+    <form method="POST" action="{{ route('works.store') }}" enctype="multipart/form-data">
+      @csrf
+      @include('works.form')
+      <div class="wrapper">
         <button class="btn" type="submit">
           公開する
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
 </div>
 @endsection

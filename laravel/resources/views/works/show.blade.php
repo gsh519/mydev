@@ -17,13 +17,14 @@
         </div>
         <div class="head-body__user__desc">
           <div class="name">{{ $work->user->name }}</div>
-          <div class="sub">Webデザイナー</div>
+          <div class="sub">{{ $work->user->comment }}</div>
         </div>
       </a>
       <div class="head-body__content">
-        {{ $work->body }}
+        {!! nl2br($work->body) !!}
       </div>
     </div>
   </div>
+  @include('footer')
 </div>
 @endsection

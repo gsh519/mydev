@@ -114,6 +114,7 @@ a {
 
 .card-item.is-hidden {
   opacity: 0;
+  visibility: hidden;
   height: 0;
   margin: 0;
 }
@@ -809,10 +810,12 @@ HOME
 
 .head-cover__img img {
   width: 100%;
+  border-radius: 25px;
+  box-shadow: 1px 1px 10px 5px #ccc;
 }
 
 .head-body {
-  padding: 30px 0;
+  padding: 30px 0 100px;
 }
 
 .head-body__ttl {
@@ -851,6 +854,8 @@ HOME
 
 .head-body__content {
   margin-top: 30px;
+  font-size: 18px;
+  min-height: 300px;
 }
 
 /*************
@@ -905,6 +910,95 @@ Profile
   max-width: 100%;
   margin-bottom: 20px;
   margin-top: 5px;
+}
+
+.create-work {
+  padding-bottom: 60px;
+}
+
+.create-work .work-head {
+  background-color: #EDF2F6;
+  padding: 40px 0;
+}
+
+.create-work .work-cover_img {
+  margin-bottom: 30px;
+}
+
+.create-work .work-cover_img .cover_label {
+  padding: 15px 10px;
+  border: 1px dashed #ccc;
+  border-radius: 25px;
+  display: inline-block;
+  color: #a4a5b1;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.create-work .work-cover_img .cover_label:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.create-work .work-cover_img #cover_img {
+  display: none;
+}
+
+.create-work .work-title {
+  margin-bottom: 30px;
+}
+
+.create-work .work-title input {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.create-work .work-summary {
+  margin-bottom: 30px;
+}
+
+.create-work .work-summary input {
+  font-size: 16px;
+}
+
+.create-work .work-tag {
+  margin-bottom: 30px;
+}
+
+.create-work .work-tag .tag-input {
+  background-color: transparent;
+}
+
+.create-work .work-tag .tag-input .ti-input {
+  border-radius: 25px;
+}
+
+.create-work .work-service_url {
+  margin-bottom: 30px;
+}
+
+.create-work .work-service_url textarea {
+  width: 100%;
+  resize: none;
+}
+
+.create-work .work-twitter_check label {
+  color: #a4a5b1;
+  font-size: 17px;
+}
+
+.create-work .work-bottom {
+  padding: 40px;
+}
+
+.create-work .work-bottom .work-body {
+  min-height: 800px;
+}
+
+.create-work .work-bottom .work-body textarea {
+  width: 100%;
+  font-size: 18px;
+  min-height: 800px;
+  resize: none;
 }
 
 .create-work__btn {

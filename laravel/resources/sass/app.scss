@@ -118,6 +118,7 @@ a {
   opacity: 1;
   &.is-hidden {
     opacity: 0;
+    visibility: hidden;
     height: 0;
     margin: 0;
   }
@@ -740,12 +741,14 @@ HOME
     margin: 0 auto;
     img {
       width: 100%;
+      border-radius: 25px;
+      box-shadow: 1px 1px 10px 5px #ccc;
     }
   }
 }
 
 .head-body {
-  padding: 30px 0;
+  padding: 30px 0 100px;
   &__ttl {
     font-size: 34px;
     color: #333;
@@ -779,6 +782,8 @@ HOME
 
   &__content {
     margin-top: 30px;
+    font-size: 18px;
+    min-height: 300px;
   }
 }
 
@@ -833,6 +838,84 @@ Profile
 }
 
 .create-work {
+  padding-bottom: 60px;
+  .work-head {
+    background-color: #EDF2F6;
+    padding: 40px 0;
+  }
+  // カバー画像
+  .work-cover_img {
+    margin-bottom: 30px;
+    .cover_label {
+      padding: 15px 10px;
+      border: 1px dashed #ccc;
+      border-radius: 25px;
+      display: inline-block;
+      color: #a4a5b1;
+      font-size: 13px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(0,0,0,.05);
+      }
+    }
+    #cover_img {
+      display: none;
+    }
+  }
+
+  // タイトル
+  .work-title {
+    margin-bottom: 30px;
+    input {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  // プロジェクトの概要
+  .work-summary {
+    margin-bottom: 30px;
+    input {
+      font-size: 16px;
+    }
+  }
+
+  .work-tag {
+    margin-bottom: 30px;
+    .tag-input {
+      background-color: transparent;
+      .ti-input {
+        border-radius: 25px;
+      }
+    }
+  }
+
+  .work-service_url {
+    margin-bottom: 30px;
+    textarea {
+      width: 100%;
+      resize: none;
+    }
+  }
+
+  .work-twitter_check {
+    label {
+      color: #a4a5b1;
+      font-size: 17px;
+    }
+  }
+
+  .work-bottom {
+    padding: 40px;
+    .work-body {
+      min-height: 800px;
+      textarea {
+        width: 100%;
+        font-size: 18px;
+        min-height: 800px;
+        resize: none;
+      }
+    }
+  }
   &__btn {
     text-align: center;
   }
