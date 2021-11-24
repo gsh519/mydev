@@ -39,8 +39,8 @@
             @endforeach
           </ul>
         </div>
-        <div class="area__content">
-          <ul class="area__content__flex">
+        <div class="area__content today-work">
+          <ul class="area__content__flex" id="today-works">
             @foreach($today_works as $work)
             @include('works.card')
             @endforeach
@@ -69,12 +69,6 @@
         @include('works.card_big')
         @endforeach
       </ul>
-    </div>
-    <div class="wrapper">
-      <a class="btn btn--black" href="#">
-        もっと見る
-        <i class="fas fa-angle-right fa-strong"></i>
-      </a>
     </div>
   </div>
   <!-- popular tags -->

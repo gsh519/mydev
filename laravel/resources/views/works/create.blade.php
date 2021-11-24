@@ -1,6 +1,6 @@
 @extends('app')
 @section('title', 'プロダクト投稿ページ')
-@include('header')
+@include('header_create')
 @section('content')
 <div class="contents">
   @include('error_list')

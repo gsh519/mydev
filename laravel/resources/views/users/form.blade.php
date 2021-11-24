@@ -6,7 +6,11 @@
 </div> -->
 <label for="icon_img">
   <span class="filelabel" title="ファイルを選択">
+    @if ($user->icon_img)
+    <img src="{{ '/storage/'.$user->icon_img }}" alt="アイコン画像">
+    @else
     <img src="/images/default.png" alt="アイコン画像" width="150" height="150">
+    @endif
   </span>
   <p class="filelabel-text">アイコンを変更</p>
   <input type="file" name="icon_img" id="icon_img" required value="{{ $user->icon_img }}">

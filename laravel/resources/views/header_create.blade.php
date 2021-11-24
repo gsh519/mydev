@@ -47,13 +47,6 @@
         </ul>
       </div>
       @endauth
-      @auth
-      <li class="header__nav__list">
-        <button class="btn" type="submit">
-          公開する
-        </button>
-      </li>
-      @endauth
     </ul>
   </div>
 </header>

@@ -43,10 +43,9 @@ class UserController extends Controller
     }
 
     //ユーザー編集画面表示
-    public function edit()
+    public function edit(string $name)
     {
-        $id = Auth::id();
-        $user = User::find($id);
+        $user = User::where('name', $name)->first();
         return view('users.edit', ['user' => $user]);
     }
 

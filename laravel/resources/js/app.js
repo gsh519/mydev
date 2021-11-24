@@ -84,10 +84,17 @@ $('.area__btn .btn').on('click', function() {
 
 /* リストの数が、表示するリストの数以下だった場合、「もっとみる」ボタンを非表示にします。 */
 $(function() {
-	let list = $(".area__content__flex li").length;
-  if (list < moreNum) {
-    $('.area__btn .btn').addClass('is-btn-hidden');
-	}
+	let list = $(".today-work .card-item").length;
+
+  // if (list < moreNum) {
+  //   $('.area__btn .btn').addClass('is-btn-hidden');
+	// }
+
+  if (list === 0) {
+    let ul_list = document.getElementById('today-works');
+
+    ul_list.insertAdjacentHTML('afterbegin', '<li>今日の投稿はまだありません</li>')
+  }
 });
 
 

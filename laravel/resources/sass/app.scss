@@ -655,10 +655,11 @@ HOME
   }
   &__btn {
     text-align: right;
-    &.is-btn-hidden {
-      display: none;
-    }
   }
+}
+
+.is-btn-hidden {
+  display: none;
 }
 
 // user詳細画面
@@ -946,6 +947,8 @@ Profile
 }
 .filelabel img {
   vertical-align: bottom;
+  width: 100%;
+  height: 100%;
 }
 .filelabel-text {
   text-align: center;
