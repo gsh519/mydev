@@ -55,10 +55,14 @@ class UserController extends Controller
         $id = Auth::id();
         $user = User::find($id);
         $edit_data = $user->fill($request->all());
-        $fileName = $request->icon_img->getClientOriginalName();
-        $icon_img = $request->file('icon_img')->storeAs('', $fileName, 'public');
-        $user->icon_img = $icon_img;
-        $edit_data->save();
+        if (is_null($request->icon_img)) {
+            $edit_data->save();
+        } else {
+            $fileName = $request->icon_img->getClientOriginalName();
+            $icon_img = $request->file('icon_img')->storeAs('', $fileName, 'public');
+            $user->icon_img = $icon_img;
+            $edit_data->save();
+        }
         return redirect()->route('users.show', ['name' => $name]);
     }
 }

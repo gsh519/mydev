@@ -13,7 +13,7 @@
     @endif
   </span>
   <p class="filelabel-text">アイコンを変更</p>
-  <input type="file" name="icon_img" id="icon_img" required value="{{ $user->icon_img }}">
+  <input type="file" name="icon_img" id="icon_img" value="{{ $user->icon_img }}">
 </label>
 <div class="work-name">
   <label for="name">ユーザー名</label>

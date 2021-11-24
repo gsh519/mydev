@@ -7,16 +7,17 @@
     <div class="wrapper">
       <div class="user-card">
         <div class="user-card__icon">
-          @if ($user->icon_img)
+          @if (Auth::user()->icon_img)
           <img src="{{ '/storage/'.$user->icon_img }}" alt="アイコン画像">
           @else
           <img src="/images/default.png" alt="デフォルト画像">
           @endif
-
         </div>
         <div class="user-card__flex">
           <h2 class="user-card__flex__name">{{ $user->name }}</h2>
+          @if (Auth::id() === $user->id)
           <a href="{{ route('users.edit', ['user' => $user, 'name' => $user->name]) }}"><i class="edit-pen fas fa-pen"></i></a>
+          @endif
         </div>
         <p class="user-card__comment">{{ $user->comment }}</p>
         @if (Auth::id() !== $user->id)
