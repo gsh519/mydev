@@ -10,6 +10,7 @@ $bgGray-color: #edf2f7;
 //共通レイアウト
 body {
   font-family: Rubik, "Noto Sans JP", sans-serif;
+  background-color: #EDF2F6;
 }
 
 p {
@@ -371,6 +372,7 @@ index
 //detail-css
 .detail {
   border-bottom: 3px solid #ccc;
+  background-color: #fff;
   &__inner {
     padding: 60px 0;
   }
@@ -448,6 +450,7 @@ index
 
 //start-css
 .start {
+  background-color: #fff;
   &__inner {
   padding: 40px 0 8px;
   text-align: center;
@@ -749,6 +752,7 @@ HOME
 }
 
 .head-body {
+  background-color: #fff;
   padding: 30px 0 100px;
   &__ttl {
     font-size: 34px;
@@ -777,6 +781,21 @@ HOME
       .sub {
         font-size: 12px;
         color: rgba(58,60,72,0.45);
+      }
+    }
+    &__summary {
+      border: solid 1px #dce4ec;
+      margin: 2em 0 1em;
+      padding: 2.3em 1.9em 2.2em;
+      border-radius: 4px;
+      display: flex;
+      .overview {
+        font-size: 1.3em;
+        font-weight: 600;
+        line-height: 1.1;
+        margin-right: 1.8em;
+        letter-spacing: 3px;
+        white-space: nowrap;
       }
     }
   }
@@ -850,6 +869,7 @@ Profile
 
 .create-work {
   padding-bottom: 60px;
+  background-color: #fff;
   .work-head {
     background-color: #EDF2F6;
     padding: 40px 0;
@@ -917,6 +937,7 @@ Profile
 
   .work-bottom {
     padding: 40px;
+    background-color: #fff;
     .work-body {
       min-height: 800px;
       textarea {

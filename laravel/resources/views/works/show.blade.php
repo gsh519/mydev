@@ -20,6 +20,10 @@
           <div class="sub">{{ $work->user->comment }}</div>
         </div>
       </a>
+      <div class="head-body__user__summary">
+        <p class="overview">OVERVIEW</p>
+        <p>{{ $work->summary }}</p>
+      </div>
       <div class="head-body__content">
         {!! nl2br($work->body) !!}
       </div>

@@ -1,5 +1,6 @@
 body {
   font-family: Rubik, "Noto Sans JP", sans-serif;
+  background-color: #EDF2F6;
 }
 
 p {
@@ -386,6 +387,7 @@ index
 
 .detail {
   border-bottom: 3px solid #ccc;
+  background-color: #fff;
 }
 
 .detail__inner {
@@ -470,6 +472,10 @@ index
 
 .popular .btn-wrap {
   text-align: center;
+}
+
+.start {
+  background-color: #fff;
 }
 
 .start__inner {
@@ -815,6 +821,7 @@ HOME
 }
 
 .head-body {
+  background-color: #fff;
   padding: 30px 0 100px;
 }
 
@@ -850,6 +857,23 @@ HOME
 .head-body__user__desc .sub {
   font-size: 12px;
   color: rgba(58, 60, 72, 0.45);
+}
+
+.head-body__user__summary {
+  border: solid 1px #dce4ec;
+  margin: 2em 0 1em;
+  padding: 2.3em 1.9em 2.2em;
+  border-radius: 4px;
+  display: flex;
+}
+
+.head-body__user__summary .overview {
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-right: 1.8em;
+  letter-spacing: 3px;
+  white-space: nowrap;
 }
 
 .head-body__content {
@@ -925,6 +949,7 @@ Profile
 
 .create-work {
   padding-bottom: 60px;
+  background-color: #fff;
 }
 
 .create-work .work-head {
@@ -999,6 +1024,7 @@ Profile
 
 .create-work .work-bottom {
   padding: 40px;
+  background-color: #fff;
 }
 
 .create-work .work-bottom .work-body {
