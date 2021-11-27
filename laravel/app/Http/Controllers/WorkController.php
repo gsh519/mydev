@@ -56,9 +56,11 @@ class WorkController extends Controller
     public function store(WorkRequest $request, Work $work)
     {
         $work->fill($request->all());
+        // 画像ファイルの処理
         $fileName = $request->cover_img->getClientOriginalName();
         $cover_img = $request->file('cover_img')->storeAs('', $fileName, 'public');
         $work->cover_img = $cover_img;
+        // 画像ファイルの処理終了
         $work->user_id = $request->user()->id;
         $work->save();
 

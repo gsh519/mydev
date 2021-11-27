@@ -24,6 +24,7 @@ $(function() {
     // ③クリック済みタブのデザインを設定したcssのクラスを一旦削除
     $('.tab li').removeClass('active');
 
+
     // ④クリックされたタブにクリック済みデザインを適用する
     $(this).addClass('active');
 
@@ -69,6 +70,15 @@ $(function() {
     });
   });
 
+  $('.line_big').each(function () {
+    $(this).on('click', function() {
+      let target = $(this).data('target');
+      let modal = document.getElementById(target);
+      $(modal).fadeToggle();
+      return false;
+    });
+  });
+
   // もっとみるボタン実装
   let moreNum = 9;
   /* 表示するリストの数以降のリストを隠しておきます。 */
@@ -84,17 +94,41 @@ $('.area__btn .btn').on('click', function() {
 
 /* リストの数が、表示するリストの数以下だった場合、「もっとみる」ボタンを非表示にします。 */
 $(function() {
-	let list = $(".today-work .card-item").length;
+	let todayWork_list = $(".today-work .card-item").length;
+  let weeklyWork_list = $(".weekly-work .card-item").length;
+  let popularWork_list = $(".popular-work .card-item").length;
 
-  // if (list < moreNum) {
-  //   $('.area__btn .btn').addClass('is-btn-hidden');
-	// }
-
-  if (list === 0) {
+  if (todayWork_list === 0) {
     let ul_list = document.getElementById('today-works');
-
     ul_list.insertAdjacentHTML('afterbegin', '<li>今日の投稿はまだありません</li>')
   }
+
+  if (weeklyWork_list === 0) {
+    let ul_list = document.getElementById('weekly-works');
+    ul_list.insertAdjacentHTML('afterbegin', '<li>今日の投稿はまだありません</li>')
+  }
+
+  if (popularWork_list === 0) {
+    let ul_list = document.getElementById('popular-works');
+    ul_list.insertAdjacentHTML('afterbegin', '<li>今日の投稿はまだありません</li>')
+  }
+
+  let popular_btn = $('#popular-btn');
+  let weekly_btn = $('#weekly-btn');
+  let today_btn = $('#today-btn');
+
+  if (popularWork_list <= moreNum) {
+    $(popular_btn).addClass('is-btn-hidden')
+  }
+
+  if (weeklyWork_list <= moreNum) {
+    $(weekly_btn).addClass('is-btn-hidden')
+  }
+
+  if (todayWork_list <= moreNum) {
+    $(today_btn).addClass('is-btn-hidden')
+  }
+
 });
 
 

@@ -224,6 +224,7 @@ a {
   width: 150px;
   right: -20px;
   top: 20px;
+  z-index: 10;
 }
 
 .dropdown ul li {
@@ -252,6 +253,10 @@ a {
 }
 
 .dropdown .line {
+  cursor: pointer;
+}
+
+.dropdown .line_big {
   cursor: pointer;
 }
 
@@ -630,6 +635,11 @@ HOME
   font-size: 40px;
   text-align: center;
   margin-bottom: 32px;
+  display: none;
+}
+
+.home__works__ttl.active {
+  display: block;
 }
 
 .home__works .tab {

@@ -18,26 +18,40 @@
   <!-- プロダウト一覧箇所 -->
   <div class="home__works">
     <div class="wrapper">
-      <h1 class="home__works__ttl">Popular works</h1>
+      <h1 class="home__works__ttl active">Popular works</h1>
+      <h1 class="home__works__ttl">Weekly works</h1>
+      <h1 class="home__works__ttl">Today works</h1>
       <ul class="tab">
         <li class="active">Popular</li>
         <li>Weekly</li>
         <li>Today</li>
       </ul>
       <div class="area">
-        <div class="area__content show">
-          <ul class="area__content__flex">
+        <div class="area__content popular-work show">
+          <ul class="area__content__flex" id="popular-works">
             @foreach($popular_works as $work)
             @include('works.card')
             @endforeach
           </ul>
+          <div class="area__btn">
+            <button class="btn btn--black" id="popular-btn">
+              もっと見る
+              <i class="fas fa-angle-right fa-strong"></i>
+            </button>
+          </div>
         </div>
-        <div class="area__content">
-          <ul class="area__content__flex">
+        <div class="area__content weekly-work">
+          <ul class="area__content__flex" id="weekly-works">
             @foreach($weekly_works as $work)
             @include('works.card')
             @endforeach
           </ul>
+          <div class="area__btn">
+            <button class="btn btn--black" id="weekly-btn">
+              もっと見る
+              <i class="fas fa-angle-right fa-strong"></i>
+            </button>
+          </div>
         </div>
         <div class="area__content today-work">
           <ul class="area__content__flex" id="today-works">
@@ -45,12 +59,12 @@
             @include('works.card')
             @endforeach
           </ul>
-        </div>
-        <div class="area__btn">
-          <button class="btn btn--black">
-            もっと見る
-            <i class="fas fa-angle-right fa-strong"></i>
-          </button>
+          <div class="area__btn">
+            <button class="btn btn--black" id="today-btn">
+              もっと見る
+              <i class="fas fa-angle-right fa-strong"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

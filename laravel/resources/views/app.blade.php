@@ -15,7 +15,7 @@
   <!-- reset.css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
 
-
+  <link rel="icon" href="favicon.ico">
 
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
