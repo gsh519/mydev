@@ -15,20 +15,19 @@ const app = new Vue({
 
 $(function() {
 
-  // ①タブをクリックしたら発動
+  //表示する要素切り替え
   $('.tab li').click(function() {
 
-    // ②クリックされたタブの順番を変数に格納
     let index = $('.tab li').index(this);
 
-    // ③クリック済みタブのデザインを設定したcssのクラスを一旦削除
     $('.tab li').removeClass('active');
 
-
-    // ④クリックされたタブにクリック済みデザインを適用する
     $(this).addClass('active');
 
-    // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
+    // タイトル切り替え
+    $('.home__works__ttl').removeClass('active').eq(index).addClass('active');
+
+    // コンテンツ切り替え
     $('.area__content').removeClass('show').eq(index).addClass('show');
   });
 
@@ -54,30 +53,46 @@ $(function() {
     reader.readAsDataURL(e.target.files[0]);
   })
 
+  // モーダル表示・非表示切り替え関数
+  function fadeModal(eachDoc) {
+    $(eachDoc).each(function () {
+      $(this).on('click', function() {
+        let target = $(this).data('target');
+        let modal = document.getElementById(target);
+        $(modal).fadeToggle();
+        return false;
+      });
+    });
+  };
+
+  // その要素以外クリックでモーダル消す関数
+  function deleteModal(parentDoc, childDoc) {
+    $(document).click(function(e) {
+      if (!$(e.target).closest(parentDoc).length) {
+        $(childDoc).fadeOut();
+      }
+    });
+  };
+
   // アイコンモーダル
   $('#icon-profile').on('click', function() {
     $('#header-modal').fadeToggle();
     return false;
   });
 
-  //更新・削除表示
-  $('.line').each(function () {
-    $(this).on('click', function() {
-      let target = $(this).data('target');
-      let modal = document.getElementById(target);
-      $(modal).fadeToggle();
-      return false;
-    });
-  });
+  deleteModal('.card-item__below__img', '#header-modal');
 
-  $('.line_big').each(function () {
-    $(this).on('click', function() {
-      let target = $(this).data('target');
-      let modal = document.getElementById(target);
-      $(modal).fadeToggle();
-      return false;
-    });
-  });
+  //小さいカードモーダル表示・非表示
+  fadeModal('.line');
+
+  //要素以外クリック非表示
+  deleteModal('.line', '.dropdown-menu');
+
+  //大きいカードモーダル表示・非表示
+  fadeModal('.line_big');
+
+  //要素以外クリック非表示
+  deleteModal('.line_big', '.dropdown-menu');
 
   // もっとみるボタン実装
   let moreNum = 9;

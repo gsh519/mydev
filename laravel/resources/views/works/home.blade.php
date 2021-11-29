@@ -11,7 +11,7 @@
       <div class="hero__img">
         <img src="/images/undraw_Designer_life_re_6ywf.png">
       </div>
-      <p class="contents__txt">mydevは、自身で開発したサービスや制作物を<br>より世間にに知ってもらいやすくするサービスです！<br>自身のサービス、制作物を公開して、みんなに知ってもらい意見をもらいましょう！</p>
+      <p class="contents__txt">mydevは、自身で開発したサービスや制作物をより世間にに知ってもらいやすくするサービスです！自身のサービス、制作物を公開して、みんなに知ってもらい意見をもらいましょう！</p>
       <a href="{{ route('register') }}" class="btn btn--hero">
         はじめる
       </a>
@@ -68,11 +68,6 @@
       @include('works.card_big')
       @endforeach
     </ul>
-    <div class="btn-wrap">
-      <a class="btn btn--black" href="#">
-        人気のプロダクトをチェック
-      </a>
-    </div>
   </section>
 
   <!-- start -->

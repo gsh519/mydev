@@ -301,10 +301,7 @@ header
 
 .header__nav__list {
   margin-left: 24px;
-}
-
-.header__nav__list .icon {
-  font-size: 32px;
+  position: relative;
 }
 
 #icon-profile {
@@ -317,12 +314,10 @@ header
   background-color: #fff;
   display: none;
   position: absolute;
-  top: 75px;
-  right: 397px;
-}
-
-.modal ul {
-  position: relative;
+  top: 155%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
 }
 
 .modal ul:before {
