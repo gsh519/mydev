@@ -297,11 +297,11 @@ header
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header__nav__list {
   margin-left: 24px;
-  position: relative;
 }
 
 #icon-profile {
@@ -314,9 +314,8 @@ header
   background-color: #fff;
   display: none;
   position: absolute;
-  top: 155%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 120%;
+  left: -15px;
   width: 120px;
 }
 
@@ -339,6 +338,10 @@ header
 
 .modal ul li:first-child {
   border-bottom: 1px solid #ccc;
+}
+
+.modal ul li button {
+  color: #565656;
 }
 
 /*************

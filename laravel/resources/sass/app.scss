@@ -290,12 +290,9 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     &__list {
       margin-left: 24px;
-      position: relative;
-      // .icon {
-      //   font-size: 32px;
-      // }
     }
   }
 }
@@ -310,9 +307,8 @@ header
   background-color: #fff;
   display: none;
   position: absolute;
-  top: 155%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 120%;
+  left: -15px;
   width: 120px;
   ul {
     &:before {
@@ -331,6 +327,9 @@ header
       padding: 10px;
       &:first-child {
         border-bottom: 1px solid #ccc;
+      }
+      button {
+        color: #565656;
       }
     }
   }

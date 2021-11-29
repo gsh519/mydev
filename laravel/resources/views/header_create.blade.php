@@ -27,25 +27,25 @@
           <img src="/images/default.png" alt="デフォルト画像">
           @endif
         </div>
-        <!-- モーダルウィンドウ -->
-        <div id="header-modal" class="modal">
-          <ul>
-            <li>
-              <a class="icon" href="{{ route('users.show', ['name' => Auth::user()->name]) }}">
-                プロフィール
-              </a>
-            </li>
-            <li>
-              <button form="logout-button" type="submit">
-                ログアウト
-              </button>
-              <form id="logout-button" action="{{ route('logout') }}" method="POST">
-                @csrf
-              </form>
-            </li>
-          </ul>
-        </div>
       </li>
+      <!-- モーダルウィンドウ -->
+      <div id="header-modal" class="modal">
+        <ul>
+          <li>
+            <a class="icon" href="{{ route('users.show', ['name' => Auth::user()->name]) }}">
+              プロフィール
+            </a>
+          </li>
+          <li>
+            <button form="logout-button" type="submit">
+              ログアウト
+            </button>
+            <form id="logout-button" action="{{ route('logout') }}" method="POST">
+              @csrf
+            </form>
+          </li>
+        </ul>
+      </div>
       @endauth
     </ul>
   </div>
