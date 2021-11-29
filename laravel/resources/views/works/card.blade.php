@@ -1,7 +1,7 @@
 <li class="card-item card-item--works">
   <a href="{{ route('works.show', ['work' => $work]) }}">
     <div class="card-item__img area__content__img">
-      <img src="{{ '/storage/'.$work->cover_img }}">
+      <img src="{{ $work->cover_img }}">
     </div>
   </a>
   <div class="card-item__active">
@@ -30,7 +30,7 @@
   </a>
   <a class="card-item__below" href="{{ route('users.show', ['name' => $work->user->name]) }}">
     <div class="card-item__below__img">
-      <img src="{{ '/storage/'.$work->user->icon_img }}">
+      <img src="{{ $work->user->icon_img }}">
     </div>
     <div class="card-item__below__txt">
       <div class="name">{{ $work->user->name }}</div>

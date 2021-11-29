@@ -22,7 +22,7 @@
       <li id="icon-profile" class="header__nav__list">
         <div class="card-item__below__img">
           @if (Auth::user()->icon_img)
-          <img src="{{ '/storage/'.Auth::user()->icon_img }}" alt="アイコン画像">
+          <img src="{{ Auth::user()->icon_img }}" alt="アイコン画像">
           @else
           <img src="/images/default.png" alt="デフォルト画像">
           @endif

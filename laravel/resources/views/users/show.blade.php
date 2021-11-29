@@ -8,7 +8,7 @@
       <div class="user-card">
         <div class="user-card__icon">
           @if (Auth::user()->icon_img)
-          <img src="{{ '/storage/'.$user->icon_img }}" alt="アイコン画像">
+          <img src="{{ $user->icon_img }}" alt="アイコン画像">
           @else
           <img src="/images/default.png" alt="デフォルト画像">
           @endif

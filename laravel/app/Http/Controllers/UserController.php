@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -58,9 +59,9 @@ class UserController extends Controller
         if (is_null($request->icon_img)) {
             $edit_data->save();
         } else {
-            $fileName = $request->icon_img->getClientOriginalName();
-            $icon_img = $request->file('icon_img')->storeAs('', $fileName, 'public');
-            $user->icon_img = $icon_img;
+            $uploadImg = $user->icon_img = $request->file('icon_img');
+            $path = Storage::disk('s3')->putFile('/', $uploadImg, 'public');
+            $user->icon_img = Storage::disk('s3')->url($path);
             $edit_data->save();
         }
         return redirect()->route('users.show', ['name' => $name]);
