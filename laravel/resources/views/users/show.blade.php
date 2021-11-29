@@ -7,7 +7,7 @@
     <div class="wrapper">
       <div class="user-card">
         <div class="user-card__icon">
-          @if (Auth::user()->icon_img)
+          @if ($user->icon_img)
           <img src="{{ $user->icon_img }}" alt="アイコン画像">
           @else
           <img src="/images/default.png" alt="デフォルト画像">
@@ -20,6 +20,14 @@
           @endif
         </div>
         <p class="user-card__comment">{{ $user->comment }}</p>
+        @if (Auth::id() === $user->id)
+        <div class="user-card__add">
+          <a class="btn btn--black" href="{{ route('works.create') }}">
+            <i class="fas fa-plus"></i>
+            add work
+          </a>
+        </div>
+        @endif
         @if (Auth::id() !== $user->id)
         <follow-button :initial-is-followed-by='@json($user->isFollowedBy(Auth::user()))' :authorized='@json(Auth::check())' endpoint="{{ route('users.follow', ['name' => $user->name]) }}">
         </follow-button>

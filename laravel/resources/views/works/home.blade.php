@@ -37,21 +37,21 @@
       <ul class="features__flex">
         <li class="features__flex__list">
           <div class="features__flex__img">
-            <img src="/images/features-26-min.png" alt="">
+            <img src="/images/undraw_Social_share_re_qb4v.png">
           </div>
           <h3 class="features__flex__ttl">twitterへの投稿</h3>
           <p class="features__flex__txt">投稿の際にtwitterへの投稿を許可すると、自身のサービスや制作物をmydevのtwitterで紹介いたします！</p>
         </li>
         <li class="features__flex__list">
           <div class="features__flex__img">
-            <img src="/images/features-27-min.png" alt="">
+            <img src="/images/undraw_trends_a5mf.png">
           </div>
           <h3 class="features__flex__ttl">トピックを紐づけ</h3>
           <p class="features__flex__txt">自身のサービスや制作物にタグを指定すれば、どんなツールや技術を使ったのか一目で分かります。同じトピックを持つ作品を探すこともできます。</p>
         </li>
         <li class="features__flex__list">
           <div class="features__flex__img">
-            <img src="/images/features-28-min.png" alt="">
+            <img src="/images/undraw_Resume_re_hkth.png">
           </div>
           <h3 class="features__flex__ttl">履歴書にだって</h3>
           <p class="features__flex__txt">堅苦しい紙の履歴書なんかより、経験や制作物をストックしたmydevの方が遥かにあなたの魅力を伝えてくれるはずです。</p>

@@ -7,7 +7,7 @@
 <label for="icon_img">
   <span class="filelabel" title="ファイルを選択">
     @if ($user->icon_img)
-    <img src="{{ '/storage/'.$user->icon_img }}" alt="アイコン画像">
+    <img src="{{ $user->icon_img }}" alt="アイコン画像">
     @else
     <img src="/images/default.png" alt="アイコン画像" width="150" height="150">
     @endif
@@ -25,5 +25,5 @@
 </div>
 <div class="work-comment">
   <label for="comment">簡単な自己紹介</label>
-  <textarea placeholder="ひとこと" type="text" name="comment" id="comment" required>{{ $user->comment }}</textarea>
+  <textarea placeholder="ひとこと" type="text" name="comment" id="comment">{{ $user->comment }}</textarea>
 </div>

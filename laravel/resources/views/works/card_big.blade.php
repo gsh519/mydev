@@ -31,7 +31,11 @@
 
   <a class="card-item__below" href="{{ route('users.show', ['name' => $work->user->name]) }}">
     <div class="card-item__below__img">
+      @if ($work->user->icon_img)
       <img src="{{ $work->user->icon_img }}">
+      @else
+      <img src="/images/default.png" alt="デフォルト画像">
+      @endif
     </div>
     <div class="card-item__below__txt">
       <div class="name">{{ $work->user->name }}</div>

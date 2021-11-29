@@ -71,6 +71,14 @@ a {
   font-size: 14px;
 }
 
+.likes-count .fa-heart {
+  color: #7b7b7b;
+}
+
+.likes-count .fa-heart.likes {
+  color: #ff6363;
+}
+
 .btn {
   background-color: #2dbdb0;
   color: #fff;
@@ -79,6 +87,10 @@ a {
   display: inline-block;
   border-radius: 8px;
   font-weight: bold;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
 
 .btn--hero {
@@ -163,6 +175,10 @@ a {
   overflow: hidden;
 }
 
+.card-item__below__img:hover {
+  opacity: 0.8;
+}
+
 .card-item__below__img img {
   width: 100%;
   height: 100%;
@@ -200,6 +216,18 @@ a {
   border-radius: 10px;
   margin: 0 14px;
   white-space: nowrap;
+}
+
+.tags-card:hover {
+  opacity: 0.8;
+}
+
+.tags-card:first-child {
+  margin-left: 0;
+}
+
+.tags-card--black {
+  background-color: #333;
 }
 
 .tags-card a {
@@ -430,7 +458,6 @@ index
 .features__flex {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: 32px;
 }
 
@@ -441,10 +468,12 @@ index
 
 .features__flex__img {
   text-align: center;
+  max-height: 140px;
 }
 
 .features__flex__img img {
-  width: 60%;
+  height: 140px;
+  width: 70%;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #ccc;
 }
@@ -715,6 +744,13 @@ HOME
   justify-content: space-between;
 }
 
+.area__content__flex:after {
+  content: '';
+  display: block;
+  width: 31.5%;
+  height: 0;
+}
+
 .area__content__img {
   overflow: hidden;
   width: 265px;
@@ -783,6 +819,10 @@ HOME
   font-size: 0.97em;
 }
 
+.user-area .user-head .user-card__add {
+  margin-bottom: 20px;
+}
+
 .user-area .user-head .user-card__btn {
   margin-bottom: 20px;
 }
@@ -812,6 +852,13 @@ HOME
   flex-wrap: wrap;
 }
 
+.user-area .user-works__flex:after {
+  content: '';
+  display: block;
+  width: 31.5%;
+  height: 0;
+}
+
 .head-cover {
   background-color: #EDF2F6;
   padding: 4.5em 2em;
@@ -837,6 +884,20 @@ HOME
   font-size: 34px;
   color: #333;
   margin-bottom: 30px;
+}
+
+.head-body__url {
+  margin-bottom: 32px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.head-body__url a {
+  font-weight: normal;
+}
+
+.head-body__url a:hover {
+  color: #abc4ff;
 }
 
 .head-body__user {
@@ -888,6 +949,11 @@ HOME
   margin-top: 30px;
   font-size: 18px;
   min-height: 300px;
+}
+
+.head-body__skill {
+  background-color: #fff;
+  padding-bottom: 10px;
 }
 
 .head-other_works {
@@ -1072,8 +1138,12 @@ Profile
 
 .filelabel-text {
   text-align: center;
-  color: #abc4ff;
+  color: #ccc;
   margin-bottom: 15px;
+}
+
+.filelabel-text:hover {
+  color: #abc4ff;
 }
 
 .filelabel:hover {

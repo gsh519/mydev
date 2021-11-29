@@ -90,7 +90,7 @@
     <div>
       <div class="wrapper">
         <h2 class="home__popular_tags__ttl">
-          Popular Tags
+          Tags
         </h2>
       </div>
       <ul class="card-scroll home__popular_tags__scroll">

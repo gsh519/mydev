@@ -5,15 +5,20 @@
 <div class="contents">
   <div class="head-cover">
     <div class="head-cover__img">
-      <img src="{{ '/storage/'.$work->cover_img }}">
+      <img src="{{ $work->cover_img }}">
     </div>
   </div>
   <div class="head-body">
     <div class="wrapper">
       <h1 class="head-body__ttl">{{ $work->title }}</h1>
+      <p class="head-body__url">サービスURL：　<a href="{{ $work->service_url }}">{{ $work->service_url }}</a></p>
       <a class="head-body__user" href="{{ route('users.show', ['name' => $work->user->name]) }}">
         <div class="head-body__user__icon">
-          <img src="{{ '/storage/'.$work->user->icon_img }}">
+          @if ($work->user->icon_img)
+          <img src="{{ $work->user->icon_img }}">
+          @else
+          <img src="/images/default.png" alt="デフォルト画像">
+          @endif
         </div>
         <div class="head-body__user__desc">
           <div class="name">{{ $work->user->name }}</div>
@@ -27,6 +32,17 @@
       <div class="head-body__content">
         {!! nl2br($work->body) !!}
       </div>
+    </div>
+  </div>
+  <div class="head-body__skill">
+    <div class="wrapper">
+      <ul class="card-scroll">
+        @foreach($work->tags as $tag)
+        <li class="tags-card tags-card--black">
+          <a href="{{ route('tags.show', ['tag_name' => $tag->tag_name]) }}">{{ $tag->hashtag }}</a>
+        </li>
+        @endforeach
+      </ul>
     </div>
   </div>
   <div class="head-other_works">
