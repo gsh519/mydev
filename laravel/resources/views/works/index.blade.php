@@ -106,5 +106,10 @@
 
   </div>
   @include('footer')
+  <div class="add-sp">
+    <a href="{{ route('works.create') }}">
+      <i class="fas fa-plus"></i>
+    </a>
+  </div>
 </div>
 @endsection

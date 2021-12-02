@@ -33,13 +33,20 @@ $(function() {
 
   // プロダクト一覧ページカルーセル
   $('.mypattern').slick({
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     speed: 800,
     dots: true,
     arrows: true,
     centerMode: true,
-    centerPadding: '20%'
+    centerPadding: '20%',
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        centerMode: false,
+        arrows: false,
+      },
+    }]
   });
 
   //プレビュー画像の表示

@@ -8,7 +8,7 @@
     <form method="POST" action="{{ route('works.store') }}" enctype="multipart/form-data">
       @csrf
       @include('works.form')
-      <div class="wrapper">
+      <div class="wrapper add-btn_inner">
         <button class="btn" type="submit">
           公開する
         </button>

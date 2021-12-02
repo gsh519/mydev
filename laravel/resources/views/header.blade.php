@@ -48,7 +48,7 @@
       </div>
       @endauth
       @auth
-      <li class="header__nav__list">
+      <li id="add-work" class="header__nav__list">
         <a class="btn" href="{{ route('works.create') }}">
           <i class="fas fa-plus"></i>
           add work
