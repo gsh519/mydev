@@ -33,7 +33,7 @@ $(function() {
 
   // プロダクト一覧ページカルーセル
   $('.mypattern').slick({
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     speed: 800,
     dots: true,
