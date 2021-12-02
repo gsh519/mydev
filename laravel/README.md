@@ -24,12 +24,13 @@ mydev は、自身で開発したサービスや制作物をより世間にに�
 
 ## 使用技術と環境は？
 
--   言語：PHP7, JavaScript(jQuery), Bootstrap, HTML, CSS(Sass)
+-   言語：PHP7, JavaScript(jQuery), HTML, CSS(Sass), vue
 -   フレームワーク：Laravel7
--   DBMS：MySQL
--   インフラ：AWS（EC2,RDS,ELB,S3,Route53,ACM）
--   Web サーバー：Apache HTTP Server, Amazon Linux OS2
+-   DBMS：PostgreSQL
+-   インフラ：heroku, AWS（S3）
+-   Web サーバー：Apache
 -   開発環境：ローカル環境(MacOS), VSCode
+-   仮想環境：Docker(laradock)
 
 ## アプリを制作する上で意識したことは？
 
@@ -45,6 +46,6 @@ heroku でデプロイした際に初めて heroku では画像を生成でき�
 
 ## 改善点
 
--   他の人から自分の作品にコメントできるようにしていきたい。
+-   他の人から投稿者のの作品にコメントできるようにしていきたい。
 -   投稿の際に本文箇所がテキストしか投稿できないので画像や URL、文字のサイズなどを投稿者が編集できるように WYSIWYG エディターなどを使用していきたい。
 -   ロードする際に画像がちらつくのでそこを改善していきたい。
