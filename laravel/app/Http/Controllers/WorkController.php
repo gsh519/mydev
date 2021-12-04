@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Http\Requests\WorkRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class WorkController extends Controller
 {
@@ -57,14 +58,11 @@ class WorkController extends Controller
     public function store(WorkRequest $request, Work $work)
     {
         $work->fill($request->all());
+        // 画像処理
         $uploadImg = $work->cover_img = $request->file('cover_img');
         $path = Storage::disk('s3')->putFile('/', $uploadImg, 'public');
         $work->cover_img = Storage::disk('s3')->url($path);
-        // 画像ファイルの処理
-        // $fileName = $request->cover_img->getClientOriginalName();
-        // $cover_img = $request->file('cover_img')->storeAs('', $fileName, 'public');
-        // $work->cover_img = $cover_img;
-        // 画像ファイルの処理終了
+        // 画像処理終了
         $work->user_id = $request->user()->id;
         $work->save();
 
@@ -72,6 +70,24 @@ class WorkController extends Controller
             $tag = Tag::firstOrCreate(['tag_name' => $tagName]);
             $work->tags()->attach($tag);
         });
+
+        if ($request->twitter_check === 'on') {
+            $twitter = new TwitterOAuth(
+                env('TWITTER_CLIENT_ID'),
+                env('TWITTER_CLIENT_SECRET'),
+                env('TWITTER_CLIENT_ID_ACCESS_TOKEN'),
+                env('TWITTER_CLIENT_ID_ACCESS_TOKEN_SECRET')
+            );
+
+            $twitter->post("statuses/update", [
+                "status" =>
+                '💡新しい記事が投稿されました❗❗' . PHP_EOL .
+                    '' . PHP_EOL .
+                    '✋' . $work->title . '✨' . PHP_EOL .
+                    '' . PHP_EOL .
+                    '💻http://mydev-work.herokuapp.com/works/' . $work->id . '/'
+            ]);
+        }
 
         return redirect()->route('works.index');
     }
