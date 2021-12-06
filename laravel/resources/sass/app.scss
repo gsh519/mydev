@@ -51,8 +51,7 @@ a {
   }
   .slick-slide img {
     width: 100%;
-    height: auto;
-    max-height: 329px;
+    height: 40%;
   }
   .mypattern{
     width: 100%;
@@ -1087,6 +1086,9 @@ Profile
 }
 
 @media screen and (max-width:986px) {
+  .slick-slide img {
+    height: 30%;
+  }
   .slider {
     .slick-list {
       li {

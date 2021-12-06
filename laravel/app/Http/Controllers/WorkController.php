@@ -85,6 +85,8 @@ class WorkController extends Controller
                     '' . PHP_EOL .
                     '✋' . $work->title . '✨' . PHP_EOL .
                     '' . PHP_EOL .
+                    'プロジェクトの概要' . PHP_EOL .
+                    '「' . $work->summary . '」' . PHP_EOL .
                     '💻http://mydev-work.herokuapp.com/works/' . $work->id . '/'
             ]);
         }

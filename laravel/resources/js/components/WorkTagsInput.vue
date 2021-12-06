@@ -9,7 +9,7 @@
       class="tag-input"
       v-model="tag"
       :tags="tags"
-      placeholder="使用した技術などを追加しましょう"
+      placeholder="5つまで使用した技術などを追加できます"
       :autocomplete-items="filteredItems"
       @tags-changed="newTags => tags = newTags"
       :add-on-key="[13, 32]"
